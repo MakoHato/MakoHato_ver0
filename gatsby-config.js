@@ -36,7 +36,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#477294`,
         display: `standalone`,
-        icon: `src/images/NanaIro-Week-icon-png.png`,
+        icon: `src/images/NanaIro-Week-icon.png`,
       },
     },
   ],
