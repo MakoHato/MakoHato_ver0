@@ -6,6 +6,14 @@
 
 module.exports = {
   /* Your site config here */
+  siteMetadata: {
+    title: `なないろ.Week`,
+    description: `プログラム初心者の一週間の記録。`,
+    lang: `ja`,
+    siteUrl: `https://nanairo-week.com`,
+    locate: `ja_JP`,
+    fbappid: `XXXXXXXXXXXXXXXXXXXXXXXXXXX`,
+  },
   plugins: [
     `gatsby-plugin-sass`,
     `gatsby-plugin-image`,
@@ -16,6 +24,19 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images/`,
+      },
+    },
+    `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `なないろ.Week`,
+        short_name: `ななうぃーく`,
+        start_url: "/",
+        background_color: `#ffffff`,
+        theme_color: `#477294`,
+        display: `standalone`,
+        icon: `src/images/mako-icon.jpg`,
       },
     },
   ],
