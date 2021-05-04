@@ -1,5 +1,11 @@
 import * as React from "react"
-import { Link } from "gatsby"
+import { graphql, Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {
+  faTwitter,
+  faInstagram,
+} from "@fortawesome/free-brands-svg-icons"
 
 import "../styles/nanaheader.scss"
 
@@ -39,13 +45,31 @@ export default function NanaHeader() {
             <li>
               <Link to={`/Blog/`}>Blog</Link>
             </li>
-            <li>
-              <Link to={`/Mako/`}>Mako</Link>
-            </li>
-          </ul>
+          <li className="twitter">
+            <a href="https://twitter.com/nana_week">
+              <FontAwesomeIcon icon={faTwitter} />
+            </a>
+          </li>
+          <li className="instagram">
+            <a href="http://instagram.com/">
+              <FontAwesomeIcon icon={faInstagram} />
+            </a>
+          </li>
+          <li className="Mako">
+            <a href="https://twitter.com/Mak_o_">
+              <StaticImage
+                src="../images/mako-icon.jpg"
+                alt="Makoのアイコン"
+                style={{
+                  borderRadius: "30px"
+                }}
+              />
+            </a>
+          </li>
+        </ul>
         </nav>
       </div>
-
+{/*
       <nav className="nana-nav2">
           <ul>
             <li className="sunday-color">
@@ -70,7 +94,7 @@ export default function NanaHeader() {
               <Link to={`/Saturday/`}>Saturday</Link>
             </li>
           </ul>
-        </nav>
+        </nav> */}
     </header>
   )
 }
