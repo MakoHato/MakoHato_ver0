@@ -12,7 +12,7 @@ export default function Layout({ children }) {
 
       <NanaHeader />
 
-      {children}
+        {children}
 
       <NanaFooter />
 

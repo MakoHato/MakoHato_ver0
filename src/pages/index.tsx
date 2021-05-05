@@ -8,9 +8,7 @@ import SEO from "../components/seo"
 export default function Home() {
   return (
     <NanaLayout>
-      <SEO>
-        <p>TEST</p>
-      </SEO>
+      <SEO />
     </NanaLayout>
   )
 }
