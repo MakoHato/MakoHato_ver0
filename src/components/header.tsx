@@ -39,10 +39,10 @@ export default function NanaHeader() {
         <nav className="nana-nav1">
           <ul>
             <li>
-              <Link to={`/About/`}>About</Link>
+              <Link to={`/about/`}>About</Link>
             </li>
             <li>
-              <Link to={`/Blog/`}>Blog</Link>
+              <Link to={`/blog/`}>Blog</Link>
             </li>
           <li className="twitter">
             <a href="https://twitter.com/nana_week">
@@ -55,7 +55,7 @@ export default function NanaHeader() {
             </a>
           </li>
           <li className="Mako">
-            <a href="https://twitter.com/Mak_o_">
+            <Link to={`/mako/`}>
               <StaticImage
                 src="../images/mako-icon.jpg"
                 alt="Makoのアイコン"
@@ -63,7 +63,7 @@ export default function NanaHeader() {
                   borderRadius: "30px"
                 }}
               />
-            </a>
+            </Link>
           </li>
         </ul>
         </nav>
