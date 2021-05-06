@@ -3,7 +3,7 @@ import NanaLayout from "../components/layout"
 
 import SEO from "../components/seo";
 
-export default function NotFound({location}) {
+export default function Photo({location}) {
   return (
     <NanaLayout>
       <SEO pagetitle="VIDEO" pagepath={location.pathname}/>
