@@ -42,10 +42,10 @@ export default function NanaHeader() {
               <Link to={`/blog/`}>BLOG</Link>
             </li>
             <li>
-              <Link to={`/blog/`}>PHOTO</Link>
+              <Link to={`/photo/`}>PHOTO</Link>
             </li>
             <li>
-              <Link to={`/blog/`}>VIDEO</Link>
+              <Link to={`/video/`}>VIDEO</Link>
             </li>
             <li>
               <Link to={`/contact/`}>CONTACT</Link>
