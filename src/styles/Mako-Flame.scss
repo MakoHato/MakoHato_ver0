@@ -1,80 +1,217 @@
-.w-100p{
+/* Width */
+.w-100p {
   width: 100%;
 }
-.w_100{
+.w-100 {
   width: 100px;
 }
 
-.w_200{
+.w-200 {
   width: 200px;
 }
 
-.w_300{
+.w-300 {
   width: 300px;
 }
 
-.w-700{
+.w-400 {
+  width: 400px;
+}
+
+.w-700 {
   width: 700px;
 }
 
+/* Height */
+.h-100vh {
+  height: 100vh;
+}
 
-/*  */
-.jfyc-c {
+/* Justify-content */
+.jfy-c-s {
+  justify-content: start;
+}
+
+.jfy-c-c {
   justify-content: center;
 }
 
-.ali-c{
+.jfy-c-sb {
+  justify-content: space-between;
+}
+
+.jfy-c-sa {
+  justify-content: space-around;
+}
+
+.jfy-c-se {
+  justify-content: space-evenly;
+}
+
+
+/* Align-items */
+.al-i-c{
   align-items: center;
 }
 
 /* textalign */
-.txt_al-c{
+.txt-al-c{
   text-align: center;
 }
 
 /* Margin */
-.mg_c{
+.mg-c{
   margin: 0 auto;
 }
 
 
 /* Padding */
 
-.pd_tb-10 {
+.pd-tb-10 {
   padding: 10px 0 10px 0;
 }
 
-.pd_tb-20 {
+.pd-tb-20 {
   padding: 20px 0 20px 0;
 }
 
-.pd_tb-30 {
+.pd-tb-30 {
   padding: 30px 0 30px 0;
 }
 
-.pd_tb-40 {
+.pd-tb-40 {
   padding: 40px 0 40px 0;
 }
 
-.pd_tb-50 {
+.pd-tb-50 {
   padding: 50px 0 50px 0;
 }
 
+.pd-tb-60 {
+  padding: 60px 0 60px 0;
+}
+
+.pd-tb-70 {
+  padding: 70px 0 70px 0;
+}
+
+.pd-tb-80 {
+  padding: 80px 0 80px 0;
+}
+
+.pd-tb-90 {
+  padding: 90px 0 90px 0;
+}
+
+.pd-tb-100 {
+  padding: 100px 0 100px 0;
+}
+
 /* Bar */
-.b_bar-700-1{
+
+.black-bar-1 {
   display: block;
-  width: 700px;
   border-bottom: 1px solid  black;
 }
 
-.b_bar-700-2{
+.black-bar-2 {
   display: block;
-  width: 700px;
   border-bottom: 2px solid  black;
 }
 
-.b_bar-700-3{
+.black-bar-3 {
   display: block;
-  width: 700px;
   border-bottom: 3px solid  black;
+}
+
+.gray-bar-1 {
+  display: block;
+  border-bottom: 1px solid  gray;
+}
+
+.gray-bar-2 {
+  display: block;
+  border-bottom: 2px solid  gray;
+}
+
+.gray-bar-3 {
+  display: block;
+  border-bottom: 3px solid  gray;
+}
+
+
+.white-bar-2 {
+  display: block;
+  border-bottom: 1px solid  white;
+}
+
+.white-bar-2 {
+  display: block;
+  border-bottom: 2px solid  white;
+}
+
+.white-bar-700-3 {
+  display: block;
+  border-bottom: 3px solid  white;
+}
+
+/* font-size */
+.fs-1 {
+  font-size: 1.0rem;
+}
+
+.fs-1-2r {
+  font-size: 1.2rem;
+}
+
+.fs-1-3r {
+  font-size: 1.3rem;
+}
+
+.fs-1-4r {
+  font-size: 1.4rem;
+}
+
+.fs-1-5r {
+  font-size: 1.5rem;
+}
+
+.fs-1-6r {
+  font-size: 1.6rem;
+}
+
+.fs-1-7r {
+  font-size: 1.7rem;
+}
+
+.fs-1-8r {
+  font-size: 1.8rem;
+}
+
+.fs-1-9r {
+  font-size: 1.9rem;
+}
+
+.fs-2r {
+  font-size: 2.0rem;
+}
+
+.fs-2-1r {
+  font-size: 2.1rem;
+}
+
+.fs-2-2r {
+  font-size: 2.2rem;
+}
+
+.fs-2-3r {
+  font-size: 2.3rem;
+}
+
+.fs-2-4r {
+  font-size: 2.4rem;
+}
+
+.fs-2-5r {
+  font-size: 2.5rem;
 }
