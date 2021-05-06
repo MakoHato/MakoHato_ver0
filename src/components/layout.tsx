@@ -12,7 +12,11 @@ export default function Layout({ children }) {
 
       <NanaHeader />
 
+      <div className="page">
+
         {children}
+
+      </div>
 
       <NanaFooter />
 
