@@ -33,3 +33,30 @@
     }
   }
 }
+
+
+@media only screen and (min-width: 321px) and (max-width: 768px) {
+  .page {
+    width: 100%;
+    .Twitter-Area {
+      .w-700 {
+        width: 100%;
+      }
+      .Timeline-Area {
+        padding-bottom: 170px;
+        display: block;
+        .Nana-T, .Mako-T{
+          margin: 0px;
+          h3 {
+            width: 300px;
+            margin: 50px auto 30px auto;
+          }
+          div {
+            width: 300px;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+  }
+}

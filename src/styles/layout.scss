@@ -1,4 +1,5 @@
 body {
+  height: 100%;
   background-color: aliceblue;
   font-size: 16px;
   font-family: 游明朝, YuMincho, HGS明朝E, メイリオ, Meiryo, serif;
@@ -6,6 +7,7 @@ body {
 
 .page {
   width: 1000px;
+  height: 100vh;
   margin: 0 auto;
   padding-top: 70px;
   background-color: white;
@@ -22,4 +24,14 @@ body {
 a {
 	color: inherit;
 	text-decoration: none;
+}
+
+@media only screen and (min-width: 321px) and (max-width: 768px) {
+  body {
+    position: relative;
+  }
+  .page {
+    height: 100%;
+    padding-top: 0px;
+  }
 }
