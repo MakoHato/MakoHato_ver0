@@ -7,7 +7,7 @@ import {
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons"
 
-import "../styles/nanaheader.scss"
+import "../styles/header.scss"
 
 export default function NanaHeader() {
   return (
