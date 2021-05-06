@@ -4,31 +4,37 @@ import { TwitterTimelineEmbed } from "react-twitter-embed"
 
 import SEO from "../components/seo";
 
+import "../styles/Mako-Flame.scss"
 import "../styles/index.scss"
 
 export default function Home({location}) {
   return (
     <NanaLayout>
       <SEO />
-
-      <div className="Twitter-Area">
-        <div className="Nana-T">
-          <h3>なないろWeek公式アカウント</h3>
-          <TwitterTimelineEmbed
-            sourceType="profile"
-            screenName="nanairo_week"
-            options={{ width: 400, height: 700}}
-          />
-        </div>
-        <div className="Mako-T">
-          <h3>Makoの個人アカウント</h3>
-          <TwitterTimelineEmbed
-            sourceType="profile"
-            screenName="Mak_o_"
-            options={{ width: 400, height: 700}}
-          />
+        <div className="Twitter-Area">
+          <h2>Twitter</h2>
+          <div className="w-700 mg_c">
+            <span className="b_bar-700-1"></span>
           </div>
-      </div>
+          <div className="Timeline-Area">
+            <div className="Nana-T">
+              <h3>NanaIroWeek's ACCOUNT</h3>
+              <TwitterTimelineEmbed
+                sourceType="profile"
+                screenName="nanairo_week"
+                options={{ width: 400, height: 700}}
+              />
+            </div>
+            <div className="Mako-T">
+              <h3>Mako's ACCOUNT</h3>
+              <TwitterTimelineEmbed
+                sourceType="profile"
+                screenName="Mak_o_"
+                options={{ width: 400, height: 700}}
+              />
+            </div>
+          </div>
+        </div>
     </NanaLayout>
   )
 }
