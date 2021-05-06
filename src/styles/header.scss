@@ -1,0 +1,86 @@
+.nana-header {
+  height: 70px;
+  border-bottom: solid 1px black;
+  .nana-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+  }
+  background-color: white;
+}
+
+.nanairo-logo {
+  width: 200px;
+  vertical-align: middle;
+}
+
+.nana-nav1{
+  ul {
+    display: flex;
+    list-style: none;
+    margin-left: 400px;
+  }
+  li {
+    margin: 0 50px;
+    line-height: 60px;
+    &.twitter, &.instagram, &.Mako {
+      font-size: 30px;
+      width: 30px;
+      margin: 0 20px;
+      text-align: center;
+    }
+    &.Mako {
+      width: 60px;
+      height: 60px;
+      border-radius: 30px;
+      border: solid 1px black;
+      box-sizing: border-box;
+      margin: 0 20px;
+      text-align: center;
+    }
+  }
+}
+
+
+// .nana-nav2{
+//   height: 40px;
+//   line-height: 40px;
+//   ul {
+//     display: flex;
+//     justify-content: center;
+//     list-style: none;
+//   }
+//   li {
+//     margin-bottom: 10px;
+//     width: 150px;
+//     text-align: center;
+//     border-radius: 10px;
+//     &:hover {
+//       color: white;
+//     }
+//     &.sunday-color:hover {
+//       background-color: #ff4d4d;
+//     }
+//     &.monday-color:hover {
+//       background-color: #ffb833;
+//     }
+//     &.tuesday-color:hover {
+//       color:black;
+//       background-color: #ffff33;
+//     }
+//     &.wednesday-color:hover {
+//       background-color: #4d804d;
+//     }
+//     &.thursday-color:hover {
+//       color:black;
+//       background-color: #99ffff;
+//     }
+//     &.friday-color:hover {
+//       background-color: #2929cc;
+//     }
+//     &.saturday-color:hover {
+//       background-color: #800080;
+//     }
+//   }
+// }
