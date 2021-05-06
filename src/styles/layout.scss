@@ -1,13 +1,16 @@
+body {
+  background-color: aliceblue;
+  font-size: 16px;
+  font-family: 游明朝, YuMincho, HGS明朝E, メイリオ, Meiryo, serif;
+}
+
 .page {
   width: 1000px;
   margin: 0 auto;
+  padding-top: 70px;
   background-color: white;
   border-right: solid 1px gray;
   border-left: solid 1px gray;
-}
-
-body {
-  background-color: aliceblue;
 }
 
 .nana-container {
