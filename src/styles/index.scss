@@ -1,0 +1,18 @@
+.Twitter-Area{
+  display: flex;
+  max-width: 1000px;
+  margin:  0 auto;
+  background-color: white;
+  .Nana-T, .Mako-T{
+    margin: 50px;
+    h3{
+      margin: 20px 0 20px 0;
+    }
+    div {
+      padding: 10px;
+      border: solid 1px gray;
+      border-radius: 10px;
+    }
+  }
+  
+}
