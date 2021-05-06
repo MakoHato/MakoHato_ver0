@@ -51,7 +51,7 @@ export default function NanaHeader() {
               <Link to={`/contact/`}>CONTACT</Link>
             </li>
             <li className="Mako">
-              <Link to={`/mako/`}>
+              <a href="https://mobile.twitter.com/Mak_o_" target="_blank" rel="noopener noreferrer">
                 <StaticImage
                   src="../images/mako-icon.jpg"
                   alt="Makoのアイコン"
@@ -59,7 +59,7 @@ export default function NanaHeader() {
                     borderRadius: "30px"
                   }}
                 />
-              </Link>
+              </a>
             </li>
           </ul>
         </nav>
