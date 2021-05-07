@@ -55,7 +55,7 @@ export default function Home({location}) {
               :<TwitterTimelineEmbed
                 sourceType="profile"
                 screenName="nanairo_week"
-                options={{ width: 300, height: 500}}
+                options={{ width: 300, height: 400}}
               />
             }
           </div>
@@ -70,7 +70,7 @@ export default function Home({location}) {
               :<TwitterTimelineEmbed
                 sourceType="profile"
                 screenName="Mak_o_"
-                options={{ width: 300, height: 500}}
+                options={{ width: 300, height: 400}}
               />
             }
           </div>
