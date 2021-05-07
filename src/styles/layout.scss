@@ -6,8 +6,8 @@ body {
 }
 
 .page {
-  width: 1000px;
-  height: 100vh;
+  width: 100%;
+  max-width: 1000px;
   margin: 0 auto;
   padding-top: 70px;
   background-color: white;
