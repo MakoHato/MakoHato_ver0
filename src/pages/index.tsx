@@ -14,6 +14,30 @@ export default function Home({location}) {
   return (
     <NanaLayout>
       <SEO />
+      <div className="Blog-Area">
+        <h2>Blog</h2>
+        <div className="w-70p mg-c">
+          <span className="black-bar-1"></span>
+        </div>
+        <div className="txt-al-c">
+          <p className="pd-tb-100">
+            コンテンツがまだありません。<br />
+            今後の更新をお待ちください。
+          </p>
+        </div>
+      </div>
+      <div className="Photo-Area">
+        <h2>Photo</h2>
+        <div className="w-70p mg-c">
+          <span className="black-bar-1"></span>
+        </div>
+        <div className="txt-al-c">
+          <p className="pd-tb-100">
+            コンテンツがまだありません。<br />
+            今後の更新をお待ちください。
+          </p>
+        </div>
+      </div>
       <div className="Twitter-Area">
         <h2>Twitter</h2>
         <div className="w-70p mg-c">
