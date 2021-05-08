@@ -8,7 +8,7 @@ module.exports = {
   /* Your site config here */
   siteMetadata: {
     title: `なないろWeek`,
-    description: `プログラム初心者の一週間の記録。`,
+    description: `プログラム初心者Makoの一週間の記録。`,
     lang: `ja`,
     siteUrl: `https://nanairo-week.com`,
     locate: `ja_JP`,
