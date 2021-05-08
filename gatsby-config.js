@@ -12,7 +12,7 @@ module.exports = {
     lang: `ja`,
     siteUrl: `https://nanairo-week.com`,
     locate: `ja_JP`,
-    fbappid: `XXXXXXXXXXXXXXXXXXXXXXXXXXX`,
+    fbappid: `280963450158852`,
   },
   plugins: [
     `gatsby-plugin-sass`,
