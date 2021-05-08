@@ -3,6 +3,8 @@ import NanaLayout from "../components/layout"
 
 import SEO from "../components/seo";
 
+import "../styles/pages/blog.scss"
+
 export default function Blog({location}) {
   return (
     <NanaLayout>
