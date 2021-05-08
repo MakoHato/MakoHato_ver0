@@ -77,6 +77,9 @@ Note: Beware of modifying this element as it can break the animations - you shou
   box-sizing: border-box;
   margin: 0 auto;
   text-align: center;
+  img {
+    border-radius: 50px;
+  }
 }
 
 .Humberger-Nav div{

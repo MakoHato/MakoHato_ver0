@@ -15,9 +15,6 @@ export default function HGmenu(props) {
           <StaticImage
             src="../images/mako-icon.jpg"
             alt="Makoのアイコン"
-            style={{
-              borderRadius: "50px"
-            }}
           />
         </a>
         <p className="pd-t-10">
