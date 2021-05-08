@@ -2,7 +2,7 @@ import * as React from "react"
 import { graphql, Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
-import "../styles/header.scss"
+import "../styles/components/header.scss"
 
 export default function NanaHeader() {
   return (

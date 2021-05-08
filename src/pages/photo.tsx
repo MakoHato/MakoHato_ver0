@@ -3,7 +3,7 @@ import NanaLayout from "../components/layout"
 
 import SEO from "../components/seo";
 
-import "../styles/photo.scss"
+import "../styles/pages/photo.scss"
 
 export default function Photo({location}) {
   return (

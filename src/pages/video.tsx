@@ -3,7 +3,7 @@ import NanaLayout from "../components/layout"
 
 import SEO from "../components/seo";
 
-import "../styles/video.scss"
+import "../styles/pages/video.scss"
 
 export default function Video({location}) {
   return (

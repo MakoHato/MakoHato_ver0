@@ -3,7 +3,7 @@ import NanaLayout from "../components/layout"
 
 import SEO from "../components/seo";
 
-import "../styles/contact.scss"
+import "../styles/pages/contact.scss"
 
 export default function Contact({location}) {
   return (

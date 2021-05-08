@@ -1,6 +1,6 @@
 import React from "react"
 
-import "../styles/footer.scss"
+import "../styles/components/footer.scss"
 
 export default function NanaFooter() {
   return (
