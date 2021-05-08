@@ -34,7 +34,7 @@ module.exports = {
         short_name: `ななうぃーく`,
         start_url: "/",
         background_color: `#ffffff`,
-        theme_color: `#477294`,
+        theme_color: `#ffffff`,
         display: `standalone`,
         icon: `src/images/NanaIro-Week-icon.png`,
       },
