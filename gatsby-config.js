@@ -39,5 +39,6 @@ module.exports = {
         icon: `src/images/NanaIro-Week-icon.png`,
       },
     },
+    `gatsby-plugin-offline`
   ],
 }
