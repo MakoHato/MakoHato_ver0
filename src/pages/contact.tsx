@@ -15,8 +15,6 @@ export default function Contact({location}) {
         <div className="w-70p mg-c">
           <span className="black-bar-1"></span>
         </div>
-        <h1>Contact Form</h1>
-        <p>メールフォーム送信テスト</p>
         <form
         name="contact"
         method="POST"
@@ -26,27 +24,34 @@ export default function Contact({location}) {
           <input type="hidden" name="form-name" value="contact" />
           <input type="hidden" name="bot-field" />
 
-          <div className="form-group">
-            <label>お名前<abbr title="required">*</abbr>
+          <div className="contact-form txt-al-c">
+            <label>
+            <p>
+              お名前
+            </p>
               <input type="text" className="form-control" id="name" name="name" placeholder="お名前" maxLength={30} minLength={2} required autoComplete="name" />
             </label>
-          </div>
-          <div className="form-group">
-            <label>メールアドレス<abbr title="required">*</abbr>
+            <label>
+              <p>
+                メールアドレス
+              </p>
             <input type="email" className="form-control" id="email" name="email" placeholder="" pattern="^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required autoComplete="email" />
           </label>
-          </div>
-          <div className="form-group">
-            <label>お問い合わせ内容<abbr title="required">*</abbr>
+            <label>
+            <p>
+              お問い合わせ内容
+            </p>
             <textarea className="form-control" id="contact" name="content" rows={8} required></textarea>
             </label>
           </div>
 
-          <div className="form-group">
+          <div className="txt-al-c">
           <button type="submit">送信</button>
           </div>
         </form>
-        <Link to="/">home</Link>
+        <div className="txt-al-c">
+          <Link to="/">home</Link>
+        </div>
       </div>
     </NanaLayout>
   )
