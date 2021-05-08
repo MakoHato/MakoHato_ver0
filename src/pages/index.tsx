@@ -3,7 +3,6 @@ import { TwitterTimelineEmbed } from "react-twitter-embed"
 
 import { useWindowDimensions } from "../Hooks/Window-Size"
 
-import NanaLayout from "../components/layout"
 import HumbergerMenu from "../components/Humberger-Menu"
 import NanaHeader from "../components/header"
 import NanaFooter from "../components/footer"
