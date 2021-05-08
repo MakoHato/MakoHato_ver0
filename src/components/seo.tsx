@@ -24,7 +24,7 @@ export default function Metadata(props){
 
   const url = props.pagepath ? `${data.site.siteMetadata.siteUrl}${props.pagepath}` : data.site.siteMetadata.siteUrl
 
-  // const imgurl = props.pageimg ? `${data.site.siteMetadata.siteUrl}${props.pageimg}` : props.blogimg || `${data.site.siteMetadata.siteUrl}/sns-image.png`
+  const imgurl = props.pageimg ? `${data.site.siteMetadata.siteUrl}${props.pageimg}` : props.blogimg || `${data.site.siteMetadata.siteUrl}/sns-image.jpg`
 
   const imgw = props.pageimgw || 1280
 
@@ -46,7 +46,7 @@ export default function Metadata(props){
       <meta property="og:locate" content={data.site.siteMetadata.locate} />
       <meta property="fb:app_id" content={data.site.siteMetadata.fbappid} />
 
-      <meta property="og:image" content="/static/sns-image.jpg" />
+      <meta property="og:image" content={imgurl} />
       <meta property="og:image:width" content={imgw} />
       <meta property="og:image:height" content={imgh} />
 
