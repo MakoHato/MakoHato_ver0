@@ -8,7 +8,7 @@ import NanaHeader from "../components/header"
 import NanaFooter from "../components/footer"
 
 import SEO from "../components/seo";
-import MainVisual from "../components/MainVisual"
+// import MainVisual from "../components/MainVisual"
 
 import "../styles/Mako-Flame.scss"
 import "../styles/pages/index.scss"
@@ -26,7 +26,7 @@ export default function Home({location}) {
 
       <SEO />
 
-      <MainVisual/>
+      {/* <MainVisual/> */}
 
       <div className="page">
         <div className="Blog-Area">
