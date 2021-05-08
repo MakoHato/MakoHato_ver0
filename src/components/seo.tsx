@@ -46,7 +46,7 @@ export default function Metadata(props){
       <meta property="og:locate" content={data.site.siteMetadata.locate} />
       <meta property="fb:app_id" content={data.site.siteMetadata.fbappid} />
 
-      <meta property="og:image" content="/static/sns-image.png" />
+      <meta property="og:image" content="/static/sns-image.jpg" />
       <meta property="og:image:width" content={imgw} />
       <meta property="og:image:height" content={imgh} />
 
