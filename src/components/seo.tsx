@@ -49,6 +49,7 @@ export default function Metadata(props){
       <meta property="og:image" content={imgurl} />
       <meta property="og:image:width" content={imgw} />
       <meta property="og:image:height" content={imgh} />
+      <meta property="og:image:alt" content="SNS用サイトイメージ画像" />
 
       <meta name="twitter:card" content="summary_large_image" />
     </Helmet>
