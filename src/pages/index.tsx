@@ -7,7 +7,7 @@ import { useWindowDimensions } from "../Hooks/Window-Size"
 import SEO from "../components/seo";
 
 import "../styles/Mako-Flame.scss"
-import "../styles/index.scss"
+import "../styles/pages/index.scss"
 
 export default function Home({location}) {
   const { width } = useWindowDimensions();
@@ -46,7 +46,7 @@ export default function Home({location}) {
         <div className="Timeline-Area">
           <div className="Nana-T">
             <h3>NanaIroWeek's ACCOUNT</h3>
-            { width > 768 ?
+            { width > 769 ?
               <TwitterTimelineEmbed
                 sourceType="profile"
                 screenName="nanairo_week"
@@ -61,7 +61,7 @@ export default function Home({location}) {
           </div>
           <div className="Mako-T">
             <h3>Mako's ACCOUNT</h3>
-            { width > 768 ?
+            { width > 769 ?
               <TwitterTimelineEmbed
                 sourceType="profile"
                 screenName="Mak_o_"
