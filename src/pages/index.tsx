@@ -1,5 +1,5 @@
 import React from "react"
-import { TwitterTimelineEmbed } from "react-twitter-embed"
+// import { TwitterTimelineEmbed } from "react-twitter-embed"
 
 import { useWindowDimensions } from "../Hooks/Window-Size"
 
@@ -53,7 +53,7 @@ export default function Home({location}) {
             </p>
           </div>
         </div>
-        <div className="Twitter-Area">
+        {/* <div className="Twitter-Area">
           <h2>Twitter</h2>
           <div className="w-70p mg-c">
             <span className="black-bar-1"></span>
@@ -90,7 +90,7 @@ export default function Home({location}) {
               }
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
       <NanaFooter />
     </div>
