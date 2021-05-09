@@ -53,7 +53,7 @@ export default function Metadata(props){
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@nanairo_week" />
-      <meta name="twitter:creator" content="Mak_o_" />
+      <meta name="twitter:creator" content="@Mak_o_" />
     </Helmet>
   )
 }
