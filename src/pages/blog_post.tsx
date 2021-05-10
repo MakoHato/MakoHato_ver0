@@ -1,5 +1,6 @@
 import * as React from "react"
 import { graphql } from "gatsby"
+import { renderRichText } from "gatsby-source-contentful/rich-text"
 
 import NanaLayout from "../components/layout"
 import SEO from "../components/seo";
@@ -21,6 +22,7 @@ export default function BLOG_POST({ data }) {
           </li>
         ))}
       </ul>
+      {renderRichText(data.contentfulArticles.article)}
     </NanaLayout>
   )
 }
@@ -34,6 +36,9 @@ export const query:void = graphql`
       category {
         category
         categorySlug
+      }
+      article {
+        raw
       }
     }
   }
