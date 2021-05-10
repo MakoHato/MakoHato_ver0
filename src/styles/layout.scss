@@ -3,6 +3,7 @@ body {
   background-color: white;
   font-size: 16px;
   font-family: 游明朝, YuMincho, HGS明朝E, メイリオ, Meiryo, serif;
+  color: #666;
 }
 
 .page {
@@ -11,8 +12,6 @@ body {
   margin: 0 auto;
   padding-top: 70px;
   background-color: white;
-  border-right: solid 1px gray;
-  border-left: solid 1px gray;
 }
 
 .nana-container {
@@ -35,6 +34,7 @@ a {
     position: relative;
   }
   .page {
+    width: 100%;
     max-width: 100%;
     height: 100%;
     margin: 0;
