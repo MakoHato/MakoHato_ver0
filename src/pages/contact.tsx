@@ -12,9 +12,7 @@ export default function Contact({location}) {
       <SEO pagetitle="CONTACT" pagepath={location.pathname}/>
       <div className="Contact-Page h-100vh">
         <h2 className="contact-h2">CONTACT</h2>
-        <div className="w-70p mg-c">
-          <span className="black-bar-1"></span>
-        </div>
+        <span className="bar-666-1"></span>
         <form
           name="contact"
           method="POST"
