@@ -10,7 +10,10 @@ export default function BLOG_POST({ data }) {
     <NanaLayout>
       <SEO />
 
-      <h2>{data.contentfulArticles.title}</h2>
+      {data.contentfulArticles.title}
+      <time dateTime={data.contentfulArticles.createdArticleDate}>
+        {data.contentfulArticles.createdArticleDateJP}
+      </time>
     </NanaLayout>
   )
 }
@@ -19,6 +22,8 @@ export const query:void = graphql`
   query {
     contentfulArticles {
       title
+      createdArticleDateJP: createdArticleDate(formatString: "YYYY/MM/DD")
+      createdArticleDate
     }
   }
 `
