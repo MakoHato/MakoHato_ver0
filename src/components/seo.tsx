@@ -18,17 +18,17 @@ export default function Metadata(props){
   }
   `)
 
-  const title = props.pagetitle ? `${props.pagetitle} | ${data.site.siteMetadata.title}` : data.site.siteMetadata.title
+  const title:string = props.pagetitle ? `${props.pagetitle} | ${data.site.siteMetadata.title}` : data.site.siteMetadata.title
 
-  const description = props.pagedesc || data.site.siteMetadata.description
+  const description:string = props.pagedesc || data.site.siteMetadata.description
 
   const url = props.pagepath ? `${data.site.siteMetadata.siteUrl}${props.pagepath}` : data.site.siteMetadata.siteUrl
 
   const imgurl = props.pageimg ? `${data.site.siteMetadata.siteUrl}${props.pageimg}` : props.blogimg || `${data.site.siteMetadata.siteUrl}/sns-image.jpg`
 
-  const imgw = props.pageimgw || 1280
+  const imgw:number = props.pageimgw || 1280
 
-  const imgh = props.pageimgh || 640
+  const imgh:number = props.pageimgh || 640
 
   return (
     <Helmet>
@@ -47,8 +47,8 @@ export default function Metadata(props){
       <meta property="fb:app_id" content={data.site.siteMetadata.fbappid} />
 
       <meta property="og:image" content={imgurl} />
-      <meta property="og:image:width" content={imgw} />
-      <meta property="og:image:height" content={imgh} />
+      <meta property="og:image:width" content={imgw.toString()} />
+      <meta property="og:image:height" content={imgh.toString()} />
       <meta property="og:image:alt" content="SNS用サイトイメージ画像" />
 
       <meta name="twitter:card" content="summary_large_image" />
