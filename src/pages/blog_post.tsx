@@ -14,6 +14,13 @@ export default function BLOG_POST({ data }) {
       <time dateTime={data.contentfulArticles.createdArticleDate}>
         {data.contentfulArticles.createdArticleDateJP}
       </time>
+      <ul>
+        {data.contentfulArticles.category.map(cate => (
+          <li className={cate.categorySlug}>
+            {cate.category}
+          </li>
+        ))}
+      </ul>
     </NanaLayout>
   )
 }
@@ -24,6 +31,10 @@ export const query:void = graphql`
       title
       createdArticleDateJP: createdArticleDate(formatString: "YYYY/MM/DD")
       createdArticleDate
+      category {
+        category
+        categorySlug
+      }
     }
   }
 `
