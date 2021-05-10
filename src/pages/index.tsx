@@ -31,9 +31,7 @@ export default function Home({location}) {
       <div className="page">
         <div className="Blog-Area">
           <h2>Blog</h2>
-          <div className="mg-c">
-            <span className="bar-666-1"></span>
-          </div>
+          <span className="bar-666-1"></span>
           <div className="txt-al-c">
             <p className="pd-tb-100">
               コンテンツがまだありません。<br />
@@ -43,9 +41,7 @@ export default function Home({location}) {
         </div>
         <div className="Photo-Area">
           <h2>Photo</h2>
-          <div className="mg-c">
-            <span className="bar-666-1"></span>
-          </div>
+          <span className="bar-666-1"></span>
           <div className="txt-al-c">
             <p className="pd-tb-100">
               コンテンツがまだありません。<br />
@@ -55,9 +51,7 @@ export default function Home({location}) {
         </div>
         <div className="Twitter-Area">
           <h2>Twitter</h2>
-          <div className="mg-c">
-            <span className="bar-666-1"></span>
-          </div>
+          <span className="bar-666-1"></span>
           <div className="Timeline-Area">
             <div className="Nana-T">
               <h3>NanaIroWeek's ACCOUNT</h3>
