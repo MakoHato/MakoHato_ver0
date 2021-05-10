@@ -5,7 +5,9 @@ import { renderRichText } from "gatsby-source-contentful/rich-text"
 import { BLOCKS } from "@contentful/rich-text-types"
 
 import NanaLayout from "../components/layout"
-import SEO from "../components/seo";
+import SEO from "../components/seo"
+
+import "../styles/pages/article_post.scss"
 
 const options = {
   renderNode: {
@@ -30,18 +32,29 @@ export default function BLOG_POST({ data }) {
     <NanaLayout>
       <SEO />
 
-      {data.contentfulArticles.title}
-      <time dateTime={data.contentfulArticles.createdArticleDate}>
-        {data.contentfulArticles.createdArticleDateJP}
-      </time>
-      <ul>
-        {data.contentfulArticles.category.map(cate => (
-          <li className={cate.categorySlug}>
-            {cate.category}
-          </li>
-        ))}
-      </ul>
-      {renderRichText(data.contentfulArticles.article, options)}
+      <div className="article-page">
+        <h2>{data.contentfulArticles.title}</h2>
+        <p className="created-A-Date">
+          <time dateTime={data.contentfulArticles.createdArticleDate}>
+            {data.contentfulArticles.createdArticleDateJP}
+          </time>
+        </p>
+        <div className="category">
+          <ul>
+            {data.contentfulArticles.category.map(cate => (
+              <li className={cate.categorySlug}>
+                {cate.category}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <span className="bar-666-1 mg-b-10"></span>
+
+        <div className="article-text">
+          {renderRichText(data.contentfulArticles.article, options)}
+        </div>
+      </div>
     </NanaLayout>
   )
 }
@@ -62,7 +75,7 @@ export const query:void = graphql`
           ... on ContentfulAsset {
             contentful_id
             __typename
-            gatsbyImageData(layout: CONSTRAINED width:200)
+            gatsbyImageData(layout: CONSTRAINED width:400)
             title
             description
           }
