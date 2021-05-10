@@ -31,8 +31,8 @@ export default function Home({location}) {
       <div className="page">
         <div className="Blog-Area">
           <h2>Blog</h2>
-          <div className="w-70p mg-c">
-            <span className="black-bar-1"></span>
+          <div className="mg-c">
+            <span className="bar-666-1"></span>
           </div>
           <div className="txt-al-c">
             <p className="pd-tb-100">
@@ -43,8 +43,8 @@ export default function Home({location}) {
         </div>
         <div className="Photo-Area">
           <h2>Photo</h2>
-          <div className="w-70p mg-c">
-            <span className="black-bar-1"></span>
+          <div className="mg-c">
+            <span className="bar-666-1"></span>
           </div>
           <div className="txt-al-c">
             <p className="pd-tb-100">
@@ -55,8 +55,8 @@ export default function Home({location}) {
         </div>
         <div className="Twitter-Area">
           <h2>Twitter</h2>
-          <div className="w-70p mg-c">
-            <span className="black-bar-1"></span>
+          <div className="mg-c">
+            <span className="bar-666-1"></span>
           </div>
           <div className="Timeline-Area">
             <div className="Nana-T">
