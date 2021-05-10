@@ -15,8 +15,6 @@ body {
 }
 
 .nana-container {
-  // width: 80%;
-  // max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -29,7 +27,10 @@ a {
   display: none;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 769px) {
+  h2.pd-tb-50 {
+    padding: 120px 0 50px 0 !important;
+  }
   body {
     position: relative;
   }

@@ -51,25 +51,15 @@
 }
 
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 769px) {
   .page {
     width: 100%;
     margin: 0;
-    .Blog-Area {
-      .w-70p {
-        width: 100%;
-      }
-    }
-    .Photo-Area {
-      .w-70p {
-        width: 100%;
-      }
-    }
     width: 100%;
+    .Blog-Area {
+      padding-top: 70px;
+    }
     .Twitter-Area {
-      .w-70p {
-        width: 100%;
-      }
       .Timeline-Area {
         padding-bottom: 170px;
         display: block;
