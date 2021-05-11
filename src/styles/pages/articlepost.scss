@@ -28,6 +28,18 @@
   }
 }
 
+.article-tarasi-area {
+  display: flex;
+    .prev {
+      position: absolute;
+      left: 0;
+    }
+    .next {
+      position: absolute;
+      right: 0;
+    }
+}
+
 
 @media only screen and (max-width: 769px) {
   .article-page {
@@ -46,7 +58,6 @@
       padding: 5% 5% 50% 5%;
     }
   }
-
   footer {
     box-shadow: 0px 2px 5px 2px rgba(64, 60, 67, 0.35);
   }
