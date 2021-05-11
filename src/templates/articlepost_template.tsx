@@ -55,13 +55,14 @@ export default function BLOG_POST({ data }) {
           {renderRichText(data.contentfulArticles.article, options)}
         </div>
       </div>
+
     </NanaLayout>
   )
 }
 
 export const query:void = graphql`
-  query {
-    contentfulArticles {
+  query($id: String!) {
+    contentfulArticles(id: { eq: $id }) {
       title
       createdArticleDateJP: createdArticleDate(formatString: "YYYY/MM/DD")
       createdArticleDate
