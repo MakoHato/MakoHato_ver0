@@ -1,5 +1,5 @@
 import * as React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 import { BLOCKS } from "@contentful/rich-text-types"
@@ -27,7 +27,7 @@ const options = {
   },
 }
 
-export default function BLOG_POST({ data }) {
+export default function BLOG_POST({ data, pageContext }) {
   return (
     <NanaLayout>
       <SEO />
@@ -54,6 +54,25 @@ export default function BLOG_POST({ data }) {
         <div className="article-text">
           {renderRichText(data.contentfulArticles.article, options)}
         </div>
+      </div>
+
+      <div className="article-tarasi">
+        <ul>
+          { pageContext.next && (
+            <li>
+              <Link to={`/blog/post/${pageContext.next.slug}/`} rel="prev">
+                <span>{pageContext.next.title}</span>
+              </Link>
+            </li>
+          )}
+          { pageContext.previous && (
+            <li>
+              <Link to={`/blog/post/${pageContext.previous.slug}/`} rel="next">
+                <span>{pageContext.previous.title}</span>
+              </Link>
+            </li>
+          )}
+        </ul>
       </div>
 
     </NanaLayout>
