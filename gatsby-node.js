@@ -1,7 +1,7 @@
 const path = require("path")
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
-  const { createPages } = actions
+  const { createPage } = actions
 
   const articleresult = await graphql(`
     query {
@@ -20,4 +20,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     reporter.panicOnBuild(`GraphQLのクエリでエラーが発生しました。`)
     return
   }
+
+  articleresult.data.allContentfulArticles.edges.forEach(({ node }) => {
+    createPage({
+      path: `/blog/post/${node.slug}/`,
+      component: path.resolve(`./src/templates/articlepost_template.tsx`),
+    })
+  })
 }
