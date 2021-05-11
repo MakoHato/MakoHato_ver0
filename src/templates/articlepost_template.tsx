@@ -7,7 +7,7 @@ import { BLOCKS } from "@contentful/rich-text-types"
 import NanaLayout from "../components/layout"
 import SEO from "../components/seo"
 
-import "../styles/pages/article_post.scss"
+import "../styles/pages/articlepost.scss"
 
 const options = {
   renderNode: {
@@ -56,23 +56,21 @@ export default function BLOG_POST({ data, pageContext }) {
         </div>
       </div>
 
-      <div className="article-tarasi">
-        <ul>
+      <div className="article-tarasi-area">
           { pageContext.next && (
-            <li>
+            <div className="prev">
               <Link to={`/blog/post/${pageContext.next.slug}/`} rel="prev">
                 <span>{pageContext.next.title}</span>
               </Link>
-            </li>
+            </div>
           )}
           { pageContext.previous && (
-            <li>
+            <div className="next">
               <Link to={`/blog/post/${pageContext.previous.slug}/`} rel="next">
                 <span>{pageContext.previous.title}</span>
               </Link>
-            </li>
+            </div>
           )}
-        </ul>
       </div>
 
     </NanaLayout>
