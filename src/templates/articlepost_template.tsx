@@ -60,14 +60,14 @@ export default function BLOG_POST({ data, pageContext }) {
           { pageContext.next && (
             <div className="prev">
               <Link to={`/blog/post/${pageContext.next.slug}/`} rel="prev">
-                <span>{pageContext.next.title}</span>
+                <span>＜前の記事</span>
               </Link>
             </div>
           )}
           { pageContext.previous && (
             <div className="next">
               <Link to={`/blog/post/${pageContext.previous.slug}/`} rel="next">
-                <span>{pageContext.previous.title}</span>
+                <span>次の記事＞</span>
               </Link>
             </div>
           )}
