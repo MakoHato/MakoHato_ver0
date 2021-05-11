@@ -1,5 +1,5 @@
 import * as React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 import { BLOCKS } from "@contentful/rich-text-types"
@@ -7,7 +7,7 @@ import { BLOCKS } from "@contentful/rich-text-types"
 import NanaLayout from "../components/layout"
 import SEO from "../components/seo"
 
-import "../styles/pages/article_post.scss"
+import "../styles/pages/articlepost.scss"
 
 const options = {
   renderNode: {
@@ -27,7 +27,7 @@ const options = {
   },
 }
 
-export default function BLOG_POST({ data }) {
+export default function BLOG_POST({ data, pageContext }) {
   return (
     <NanaLayout>
       <SEO />
@@ -55,13 +55,31 @@ export default function BLOG_POST({ data }) {
           {renderRichText(data.contentfulArticles.article, options)}
         </div>
       </div>
+
+      <div className="article-tarasi-area">
+          { pageContext.next && (
+            <div className="prev">
+              <Link to={`/blog/post/${pageContext.next.slug}/`} rel="prev">
+                <span>＜前の記事</span>
+              </Link>
+            </div>
+          )}
+          { pageContext.previous && (
+            <div className="next">
+              <Link to={`/blog/post/${pageContext.previous.slug}/`} rel="next">
+                <span>次の記事＞</span>
+              </Link>
+            </div>
+          )}
+      </div>
+
     </NanaLayout>
   )
 }
 
 export const query:void = graphql`
-  query {
-    contentfulArticles {
+  query($id: String!) {
+    contentfulArticles(id: { eq: $id }) {
       title
       createdArticleDateJP: createdArticleDate(formatString: "YYYY/MM/DD")
       createdArticleDate
