@@ -60,7 +60,24 @@
       font-size: 1.2rem;
     }
     .article-text {
-      padding: 5% 5% 50% 5%;
+      padding: 5% 5% 10% 5%;
+      border-bottom: solid 1px #666;
+    }
+  }
+  .article-tarasi-area {
+    display: flex;
+    margin: 0;
+    padding: 10% 0 50% 0;
+    div{
+      padding: 20px;
+    }
+    .prev {
+      font-size: 0.75rem;
+      left: 10%;
+    }
+    .next {
+      font-size: 0.75rem;
+      right: 10%;
     }
   }
   footer {
