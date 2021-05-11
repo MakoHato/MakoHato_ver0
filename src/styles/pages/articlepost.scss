@@ -30,14 +30,18 @@
 
 .article-tarasi-area {
   display: flex;
-    .prev {
-      position: absolute;
-      left: 0;
-    }
-    .next {
-      position: absolute;
-      right: 0;
-    }
+  margin: 10% 0;
+  div{
+    padding: 20px;
+  }
+  .prev {
+    position: absolute;
+    left: 40%;
+  }
+  .next {
+    position: absolute;
+    right: 40%;
+  }
 }
 
 
@@ -47,6 +51,7 @@
     margin: 0;
     padding: 120px 0 0 0;
     font-size: 0.9rem;
+    box-shadow: none;
     .created-A-Date {
       padding-right: 5%;
     }
