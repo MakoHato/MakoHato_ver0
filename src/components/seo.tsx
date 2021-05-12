@@ -26,9 +26,9 @@ export default function Metadata(props){
 
   const imgurl = props.pageimg ? `${data.site.siteMetadata.siteUrl}${props.pageimg}` : props.blogimg || `${data.site.siteMetadata.siteUrl}/sns-image.jpg`
 
-  const imgw:number = props.pageimgw || 1280
+  const imgw:number = props.pageimgw || 1920
 
-  const imgh:number = props.pageimgh || 640
+  const imgh:number = props.pageimgh || 1080
 
   return (
     <Helmet>
