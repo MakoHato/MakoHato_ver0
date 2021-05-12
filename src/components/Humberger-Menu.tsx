@@ -39,13 +39,13 @@ export default function HGmenu(props) {
             PHOTO
           </Link>
         </div>
-
+{/*
         <div>
           <Link to="/video" className="menu-item" >
             VIDEO
           </Link>
         </div>
-
+*/}
         <div>
           <Link to="/contact" className="menu-item" >
             CONTACT
