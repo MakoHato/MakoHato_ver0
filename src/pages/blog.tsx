@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import NanaLayout from "../components/layout"
 
@@ -17,14 +17,14 @@ export default function Blog({ data, location }) {
         <div>
           {data.allContentfulArticles.edges.map(({ node }) => (
             <article key={node.id}>
-              <a>
+              <Link to={`/blog/post/${node.slug}/`}>
                 <GatsbyImage
                   image={node.eyecatch.gatsbyImageData}
                   alt={node.eyecatch.description}
                   style={{ height:"100%" }}
                 />
                 <h3>{ node.title }</h3>
-              </a>
+              </Link>
             </article>
           ))}
         </div>
@@ -40,6 +40,7 @@ export const query = graphql`
         node {
           title
           id
+          slug
           eyecatch {
             gatsbyImageData(width: 500, layout:CONSTRAINED)
             description
