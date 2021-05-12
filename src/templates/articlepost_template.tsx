@@ -37,6 +37,9 @@ export default function BLOG_POST({ data, pageContext, location }) {
           JSON.parse(data.contentfulArticles.article.raw)
           ).slice(0, 70)}…`}
         pagepath={location.pathname}
+        blogimg={`https:${data.contentfulArticles.eyecatch.file.url}`}
+        pageimgw={data.contentfulArticles.eyecatch.file.details.image.width}
+        pageimgh={data.contentfulArticles.eyecatch.file.details.image.height}
       />
 
       <div className="article-page">
@@ -93,6 +96,19 @@ export const query:void = graphql`
       category {
         category
         categorySlug
+      }
+      eyecatch {
+        gatsbyImageData(layout: FULL_WIDTH)
+        description
+        file {
+          details {
+            image {
+              width
+              height
+            }
+          }
+          url
+        }
       }
       article {
         raw
