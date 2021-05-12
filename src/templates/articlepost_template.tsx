@@ -30,7 +30,7 @@ const options = {
 export default function BLOG_POST({ data, pageContext }) {
   return (
     <NanaLayout>
-      <SEO />
+      <SEO pagetitle={data.contentfulArticles.title}/>
 
       <div className="article-page">
         <h2>{data.contentfulArticles.title}</h2>
