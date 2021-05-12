@@ -3,6 +3,7 @@ import { graphql, Link } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 import { BLOCKS } from "@contentful/rich-text-types"
+import { documentToPlainTextString } from "@contentful/rich-text-plain-text-renderer"
 
 import NanaLayout from "../components/layout"
 import SEO from "../components/seo"
@@ -30,7 +31,12 @@ const options = {
 export default function BLOG_POST({ data, pageContext }) {
   return (
     <NanaLayout>
-      <SEO pagetitle={data.contentfulArticles.title}/>
+      <SEO
+        pagetitle={data.contentfulArticles.title}
+        pagedesc={`${documentToPlainTextString(
+          JSON.parse(data.contentfulArticles.article.raw)
+          ).slice(0, 70)}…`}
+      />
 
       <div className="article-page">
         <h2>{data.contentfulArticles.title}</h2>
