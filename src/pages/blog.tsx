@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { GatsbyImage } from "gatsby-plugin-image"
 import NanaLayout from "../components/layout"
 
 import SEO from "../components/seo";
@@ -17,7 +18,11 @@ export default function Blog({ data, location }) {
           {data.allContentfulArticles.edges.map(({ node }) => (
             <article key={node.id}>
               <a>
-                <img></img>
+                <GatsbyImage
+                  image={node.eyecatch.gatsbyImageData}
+                  alt={node.eyecatch.description}
+                  style={{ height:"100%" }}
+                />
                 <h3>{ node.title }</h3>
               </a>
             </article>
@@ -35,6 +40,10 @@ export const query = graphql`
         node {
           title
           id
+          eyecatch {
+            gatsbyImageData(width: 500, layout:CONSTRAINED)
+            description
+          }
         }
       }
     }
