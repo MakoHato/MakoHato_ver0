@@ -28,7 +28,7 @@ const options = {
   },
 }
 
-export default function BLOG_POST({ data, pageContext }) {
+export default function BLOG_POST({ data, pageContext, location }) {
   return (
     <NanaLayout>
       <SEO
@@ -36,6 +36,7 @@ export default function BLOG_POST({ data, pageContext }) {
         pagedesc={`${documentToPlainTextString(
           JSON.parse(data.contentfulArticles.article.raw)
           ).slice(0, 70)}…`}
+        pagepath={location.pathname}
       />
 
       <div className="article-page">
