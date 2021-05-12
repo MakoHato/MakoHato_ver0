@@ -15,7 +15,7 @@ export default function Blog({ data, location }) {
         <span className="bar-666-1"></span>
         <div>
           {data.allContentfulArticles.edges.map(({ node }) => (
-            <article>
+            <article key={node.id}>
               <a>
                 <img></img>
                 <h3>{ node.title }</h3>
@@ -34,6 +34,7 @@ export const query = graphql`
       edges {
         node {
           title
+          id
         }
       }
     }
