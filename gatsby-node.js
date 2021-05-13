@@ -40,4 +40,15 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       },
     })
   })
+
+  const articlesPerPage = 10 // 1ページに表示する記事の数
+  const articles = articleresult.data.allContentfulArticles.edges.length // 記事の総数
+  const articlePages = Math.ceil(articles / articlesPerPage) // 記事一覧ページの総数
+
+  Array.from({ length: articlePages }).forEach((_, i) => {
+    createPage({
+      path: i === 0 ? '/blog/' : `/blog/${i + 1}/`,
+      component: path.resolve("./src/templates/blog_template.tsx"),
+    })
+  })
 }
