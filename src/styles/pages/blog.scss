@@ -1,0 +1,35 @@
+.page-tarasi-area {
+  display: flex;
+  margin: 10% 0;
+  div{
+    padding: 20px;
+  }
+  .prev {
+    position: absolute;
+    left: 40%;
+  }
+  .next {
+    position: absolute;
+    right: 40%;
+  }
+}
+
+
+@media only screen and (max-width: 769px) {
+  .page-tarasi-area {
+    display: flex;
+    margin: 0;
+    padding: 10% 0 50% 0;
+    div{
+      padding: 20px;
+    }
+    .prev {
+      font-size: 0.75rem;
+      left: 10%;
+    }
+    .next {
+      font-size: 0.75rem;
+      right: 10%;
+    }
+  }
+}

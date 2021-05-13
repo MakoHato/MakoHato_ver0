@@ -41,17 +41,20 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     })
   })
 
-  const articlesPerPage = 10 // 1ページに表示する記事の数
-  const articles = articleresult.data.allContentfulArticles.edges.length // 記事の総数
-  const articlePages = Math.ceil(articles / articlesPerPage) // 記事一覧ページの総数
+  const articlePostsPerPage = 10 // 1ページに表示する記事の数
+  const articlePosts = articleresult.data.allContentfulArticles.edges.length // 記事の総数
+  const articlePages = Math.ceil(articlePosts / articlePostsPerPage) // 記事一覧ページの総数
 
   Array.from({ length: articlePages }).forEach((_, i) => {
     createPage({
       path: i === 0 ? '/blog/' : `/blog/${i + 1}/`,
       component: path.resolve("./src/templates/blog_template.tsx"),
       context: {
-        skip: articlesPerPage * i,
-        limit: articlesPerPage,
+        skip: articlePostsPerPage * i,
+        limit: articlePostsPerPage,
+        currentPage: i + 1, // 現在のページ
+        isFirst: i + 1 === 1, // 最初のページ
+        isLast: i + 1 === articlePages, // 最後のページ
       },
     })
   })

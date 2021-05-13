@@ -7,7 +7,7 @@ import SEO from "../components/seo";
 
 import "../styles/pages/blog.scss"
 
-export default function Blog({ data, location }) {
+export default function Blog({ data, location, pageContext }) {
   return (
     <NanaLayout>
       <SEO
@@ -33,6 +33,29 @@ export default function Blog({ data, location }) {
           ))}
         </div>
       </div>
+
+      <div className="page-tarasi-area">
+        {!pageContext.isFirst && (
+          <div className="prev">
+            <Link
+              to={
+                pageContext.currentPage === 2 ? `/blog/` : `/blog/${pageContext.currentPage - 1}`
+              }
+              rel="prev"
+            >
+              <span>＜前のページ</span>
+            </Link>
+          </div>
+        )}
+        {!pageContext.isLast && (
+          <div className="next">
+            <Link to={`/blog/${pageContext.currentPage + 1}/`} rel="next">
+              <span>次のページ＞</span>
+            </Link>
+          </div>
+        )}
+      </div>
+
     </NanaLayout>
   )
 }
