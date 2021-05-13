@@ -1,6 +1,6 @@
 import React from "react"
 
-import HumbergerMenu from "./Humberger-Menu"
+import HumburgerMenu from "./Humburger-Menu"
 import NanaHeader from "./header"
 import NanaFooter from "./footer"
 
@@ -12,7 +12,7 @@ export default function Layout({ children }) {
     <div>
 
       <div className="disp">
-        <HumbergerMenu />
+        <HumburgerMenu />
       </div>
 
       <NanaHeader />

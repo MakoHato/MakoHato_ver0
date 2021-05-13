@@ -1,10 +1,10 @@
-import React from "react";
+import React from "react"
 import { Link } from "gatsby"
-import { slide as Menu } from "react-burger-menu";
+import  { stack as Menu }  from "react-burger-menu"
 import { StaticImage } from "gatsby-plugin-image"
 
 
-import "../styles/components/Humberger-Menu.scss"
+import "../styles/components/Humburger-Menu.scss"
 
 export default function HGmenu(props) {
   return (

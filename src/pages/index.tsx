@@ -3,7 +3,7 @@ import { TwitterTimelineEmbed } from "react-twitter-embed"
 
 import { useWindowDimensions } from "../Hooks/Window-Size"
 
-import HumbergerMenu from "../components/Humberger-Menu"
+import HumburgerMenu from "../components/Humburger-Menu"
 import NanaHeader from "../components/header"
 import NanaFooter from "../components/footer"
 
@@ -18,7 +18,7 @@ export default function Home({location}) {
     <div>
 
       <div className="disp">
-        <HumbergerMenu />
+        <HumburgerMenu />
       </div>
 
       <NanaHeader />
@@ -54,32 +54,32 @@ export default function Home({location}) {
           <div className="Timeline-Area">
             <div className="Nana-T">
               <h3>NanaIroWeek's ACCOUNT</h3>
-              { width > 769 ?
-              <TwitterTimelineEmbed
-              sourceType="profile"
-              screenName="nanairo_week"
-              options={{ width: 400, height: 700}}
-              />
-              :<TwitterTimelineEmbed
-              sourceType="profile"
-              screenName="nanairo_week"
-              options={{ width: 300, height: 400}}
-              />
+              { width > 769
+                ?<TwitterTimelineEmbed
+                  sourceType="profile"
+                  screenName="nanairo_week"
+                  options={{ width: 400, height: 700}}
+                />
+                :<TwitterTimelineEmbed
+                  sourceType="profile"
+                  screenName="nanairo_week"
+                  options={{ width: 300, height: 400}}
+                />
               }
             </div>
             <div className="Mako-T">
               <h3>Mako's ACCOUNT</h3>
-              { width > 769 ?
-              <TwitterTimelineEmbed
-              sourceType="profile"
-              screenName="Mak_o_"
-              options={{ width: 400, height: 700}}
-              />
-              :<TwitterTimelineEmbed
-              sourceType="profile"
-              screenName="Mak_o_"
-              options={{ width: 300, height: 400}}
-              />
+              { width > 769
+                ?<TwitterTimelineEmbed
+                  sourceType="profile"
+                  screenName="Mak_o_"
+                  options={{ width: 400, height: 700}}
+                />
+                :<TwitterTimelineEmbed
+                  sourceType="profile"
+                  screenName="Mak_o_"
+                  options={{ width: 300, height: 400}}
+                />
               }
             </div>
           </div>
