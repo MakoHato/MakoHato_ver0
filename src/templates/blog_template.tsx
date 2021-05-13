@@ -15,7 +15,7 @@ export default function Blog({ data, location, pageContext }) {
         pagedesc="MakoのBLOGページです"
         pagepath={location.pathname}
       />
-      <div className="Blog-Page h-100vh">
+      <div className="Blog-Page">
         <h2 className="txt-al-c pd-tb-50 fs-2r">BLOG</h2>
         <span className="bar-666-1"></span>
         <div>
