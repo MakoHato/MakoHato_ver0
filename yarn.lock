@@ -1959,6 +1959,13 @@
   dependencies:
     "@types/react" "*"
 
+"@types/react-burger-menu@^2.8.0":
+  version "2.8.0"
+  resolved "https://registry.yarnpkg.com/@types/react-burger-menu/-/react-burger-menu-2.8.0.tgz#12990cf1e5a6369a674461d76fde63de524e88f4"
+  integrity sha512-RBPlDpArTfuV0of7H22gMJKzXJbQXUOtmN/o3buAYmNiPbCiwkUkEerDUWyv/PzCTRoGiRDSijri4vqSjYxWxw==
+  dependencies:
+    "@types/react" "*"
+
 "@types/react-helmet@^6.1.1":
   version "6.1.1"
   resolved "https://registry.yarnpkg.com/@types/react-helmet/-/react-helmet-6.1.1.tgz#4fde22cbcaa1b461642e1d719cc6162d95acb110"

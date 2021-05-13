@@ -38,6 +38,7 @@
     "react-twitter-embed": "^3.0.3"
   },
   "devDependencies": {
+    "@types/react-burger-menu": "^2.8.0",
     "prettier": "2.2.1"
   },
   "repository": {
