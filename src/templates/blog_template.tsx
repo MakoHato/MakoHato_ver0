@@ -38,11 +38,11 @@ export default function Blog({ data, location }) {
 }
 
 export const query = graphql`
-  query {
+  query($skip: Int!, $limit: Int!) {
     allContentfulArticles(sort: { order: DESC, fields: createdArticleDate }
-      skip: 0
-      limit: 10
-      ) {
+      skip: $skip
+      limit: $limit
+    ) {
       edges {
         node {
           title

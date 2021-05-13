@@ -49,6 +49,10 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     createPage({
       path: i === 0 ? '/blog/' : `/blog/${i + 1}/`,
       component: path.resolve("./src/templates/blog_template.tsx"),
+      context: {
+        skip: articlesPerPage * i,
+        limit: articlesPerPage,
+      },
     })
   })
 }
