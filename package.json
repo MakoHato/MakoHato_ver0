@@ -28,7 +28,7 @@
     "gatsby-plugin-sass": "^4.4.0",
     "gatsby-plugin-sharp": "^3.4.0",
     "gatsby-source-contentful": "^5.4.0",
-    "gatsby-source-filesystem": "^3.4.0",
+    "gatsby-source-filesystem": "^3.5.0",
     "gatsby-transformer-sharp": "^3.4.0",
     "node-sass": "^5.0.0",
     "react": "^17.0.1",
@@ -38,6 +38,7 @@
     "react-twitter-embed": "^3.0.3"
   },
   "devDependencies": {
+    "@types/react-burger-menu": "^2.8.0",
     "prettier": "2.2.1"
   },
   "repository": {
