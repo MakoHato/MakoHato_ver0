@@ -15,18 +15,7 @@ module.exports = {
     fbappid: `280963450158852`,
   },
   plugins: [
-    `gatsby-plugin-sass`,
     `gatsby-plugin-image`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images/`,
-      },
-    },
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -39,7 +28,17 @@ module.exports = {
         icon: `src/images/NanaIro-Week-icon.png`,
       },
     },
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        color: `#36b336`,
+        showSpinner: false,
+      }
+    },
     `gatsby-plugin-offline`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-contentful`,
       options: {
@@ -47,6 +46,14 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
         host: process.env.CONTENTFUL_HOST,
       }
-    }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/`,
+      },
+    },
+    `gatsby-transformer-sharp`,
   ],
 }
