@@ -3,7 +3,7 @@ import NanaLayout from "../components/layout"
 
 import SEO from "../components/seo";
 
-import "../styles/pages/about.scss"
+import "../styles/pages/profile.scss"
 
 export default function About({location}) {
   return (
