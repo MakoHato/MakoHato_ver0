@@ -104,10 +104,6 @@ export const query = graphql`
           title
           id
           slug
-          eyecatch {
-            gatsbyImageData(width: 300, layout:CONSTRAINED)
-            description
-          }
         }
       }
     }
