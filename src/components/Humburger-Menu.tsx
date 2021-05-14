@@ -47,8 +47,8 @@ export default function HGmenu(props) {
         </div>
 */}
         <div>
-          <Link to="/about/" className="menu-item" >
-            ABOUT
+          <Link to="/profile/" className="menu-item" >
+            PROFILE
           </Link>
         </div>
         <div>
