@@ -8,10 +8,16 @@
     }
     .article-area {
       article {
+        transition: all .3s;
         margin: 5% 5% 5% 5%;
         padding: 50px;
         border-radius: 10px;
         box-shadow: 0px 2px 5px 1px rgba(64, 60, 67, 0.16);
+        &:hover {
+          transition: all .3s;
+          box-shadow: 0px 2px 5px 5px rgba(75, 204, 0, 0.473);
+          color:rgba(65, 172, 3, 0.773);
+        }
         a {
           display: flex;
         }
@@ -61,14 +67,21 @@
   }
 }
 
-
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 755px) {
   .page {
     width: 100%;
     margin: 0;
     width: 100%;
     .Blog-Area {
-      padding-top: 70px;
+      .article-area {
+        article {
+          margin: 5% 5% 5% 5%;
+          padding: 25px;
+          a {
+            display: block;
+          }
+        }
+      }
     }
     .Twitter-Area {
       .Timeline-Area {
