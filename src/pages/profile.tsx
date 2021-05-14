@@ -5,16 +5,16 @@ import SEO from "../components/seo";
 
 import "../styles/pages/profile.scss"
 
-export default function About({location}) {
+export default function Profile({location}) {
   return (
     <NanaLayout>
       <SEO
-        pagetitle="ABOUT"
+        pagetitle="PROFILE"
         pagedesc="Makoのことを紹介するページです。"
         pagepath={location.pathname}
       />
-      <div className="About-Page h-100vh">
-        <h2 className="txt-al-c pd-tb-50 fs-2r">ABOUT</h2>
+      <div className="Profile-Page h-100vh">
+        <h2 className="txt-al-c pd-tb-50 fs-2r">PROFILE</h2>
         <span className="bar-666-1"></span>
         <div >
           <p className="txt-al-c fs-1-2r pd-tb-100">
