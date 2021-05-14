@@ -43,6 +43,9 @@ export default function NanaHeader() {
             <li>
               <Link to={`/photo/`}>PHOTO</Link>
             </li>
+            <li>
+              <Link to={`/about/`}>ABOUT</Link>
+            </li>
             {/* <li>
               <Link to={`/video/`}>VIDEO</Link>
             </li> */}

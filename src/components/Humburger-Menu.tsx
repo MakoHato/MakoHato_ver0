@@ -29,25 +29,30 @@ export default function HGmenu(props) {
         </div>
 
         <div>
-          <Link to="/blog" className="menu-item" >
+          <Link to="/blog/" className="menu-item" >
             BLOG
           </Link>
         </div>
 
         <div>
-          <Link to="/photo" className="menu-item" >
+          <Link to="/photo/" className="menu-item" >
             PHOTO
           </Link>
         </div>
 {/*
         <div>
-          <Link to="/video" className="menu-item" >
+          <Link to="/video/" className="menu-item" >
             VIDEO
           </Link>
         </div>
 */}
         <div>
-          <Link to="/contact" className="menu-item" >
+          <Link to="/about/" className="menu-item" >
+            ABOUT
+          </Link>
+        </div>
+        <div>
+          <Link to="/contact/" className="menu-item" >
             CONTACT
           </Link>
         </div>
