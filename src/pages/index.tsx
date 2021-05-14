@@ -31,7 +31,7 @@ export default function Home({ data, location, pageContext }) {
         <div className="Blog-Area">
           <h2>Blog</h2>
           <span className="bar-666-1"></span>
-          <div>
+          <div className="article-area">
             {data.allContentfulArticles.edges.map(({ node }) => (
               <article key={node.id}>
                 <Link to={`/blog/post/${node.slug}/`}>
@@ -110,7 +110,7 @@ export const query = graphql`
           id
           slug
           eyecatch {
-            gatsbyImageData(width: 500, layout:CONSTRAINED)
+            gatsbyImageData(width: 300, layout:CONSTRAINED)
             description
           }
         }
