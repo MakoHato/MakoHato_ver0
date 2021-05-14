@@ -74,7 +74,15 @@
     margin: 0;
     width: 100%;
     .Blog-Area {
-      padding-top: 70px;
+      .article-area {
+        article {
+          margin: 5% 5% 5% 5%;
+          padding: 25px;
+          a {
+            display: block;
+          }
+        }
+      }
     }
     .Twitter-Area {
       .Timeline-Area {
