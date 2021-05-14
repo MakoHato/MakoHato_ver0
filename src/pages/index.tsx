@@ -35,11 +35,6 @@ export default function Home({ data, location, pageContext }) {
             {data.allContentfulArticles.edges.map(({ node }) => (
               <article key={node.id}>
                 <Link to={`/blog/post/${node.slug}/`}>
-                  <GatsbyImage
-                    image={node.eyecatch.gatsbyImageData}
-                    alt={node.eyecatch.description}
-                    style={{ height:"100%" }}
-                  />
                   <h3>{node.title}</h3>
                 </Link>
               </article>
