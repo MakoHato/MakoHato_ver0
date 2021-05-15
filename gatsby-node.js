@@ -21,6 +21,13 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           }
         }
       }
+      allContentfulCategory {
+        edges {
+          node {
+            categorySlug
+          }
+        }
+      }
     }
   `)
 
@@ -55,6 +62,20 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         currentPage: i + 1, // 現在のページ
         isFirst: i + 1 === 1, // 最初のページ
         isLast: i + 1 === articlePages, // 最後のページ
+      },
+    })
+  })
+
+  articleresult.data.allContentfulCategory.edges.forEach(({ node }) => {
+    createPage({
+      path: `/cat/${node.categorySlug}/`,
+      component: path.resolve(`./src/templates/category-template.tsx`),
+      context: {
+        skip: 0,
+        limit: 100,
+        currentPage: 1,
+        isFirst: true,
+        isLast: true,
       },
     })
   })
