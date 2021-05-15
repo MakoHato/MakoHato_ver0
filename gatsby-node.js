@@ -53,7 +53,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     })
   })
 
-  const articlePostsPerPage = 10 // 1ページに表示する記事の数
+  const articlePostsPerPage = 7 // 1ページに表示する記事の数
   const articlePosts = articleresult.data.allContentfulArticles.edges.length // 記事の総数
   const articlePages = Math.ceil(articlePosts / articlePostsPerPage) // 記事一覧ページの総数
 
@@ -72,7 +72,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   })
 
   articleresult.data.allContentfulCategory.edges.forEach(({ node }) => {
-    const catPostsPerPage = 10
+    const catPostsPerPage = 7
     const catPosts = node.articles.length
     const catPages = Math.ceil(catPosts / catPostsPerPage)
 
