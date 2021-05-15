@@ -40,7 +40,9 @@ export default function Blog({ data, location, pageContext }) {
           <div className="prev">
             <Link
               to={
-                pageContext.currentPage === 2 ? `/blog/` : `/blog/${pageContext.currentPage - 1}`
+                pageContext.currentPage === 2
+                  ? `/cat/${pageContext.catslug}/`
+                  : `/car/${pageContext.catslug}/${pageContext.currentPage - 1}`
               }
               rel="prev"
             >
@@ -50,7 +52,7 @@ export default function Blog({ data, location, pageContext }) {
         )}
         {!pageContext.isLast && (
           <div className="next">
-            <Link to={`/blog/${pageContext.currentPage + 1}/`} rel="next">
+            <Link to={`/cat/${pageContext.catslug}/${pageContext.currentPage + 1}/`} rel="next">
               <span>次のページ＞</span>
             </Link>
           </div>
