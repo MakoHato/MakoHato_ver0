@@ -11,13 +11,14 @@ export default function Blog({ data, location, pageContext }) {
   return (
     <NanaLayout>
       <SEO
-        pagetitle="BLOG"
-        pagedesc="MakoのBLOGページです"
+        pagetitle={`CATEGORY: ${pageContext.catname}`}
+        pagedesc={`「${pageContext.catname}」の記事ページです。`}
         pagepath={location.pathname}
       />
       <div className="Blog-Page">
         <h2 className="txt-al-c pd-tb-50 fs-2r">BLOG</h2>
         <span className="bar-666-1"></span>
+        <h3>{pageContext.catname}</h3>
         <div>
           {data.allContentfulArticles.edges.map(({ node }) => (
             <article key={node.id}>
@@ -27,7 +28,7 @@ export default function Blog({ data, location, pageContext }) {
                   alt={node.eyecatch.description}
                   style={{ height:"100%" }}
                 />
-                <h3>{ node.title }</h3>
+                <h4>{ node.title }</h4>
               </Link>
             </article>
           ))}
@@ -39,7 +40,9 @@ export default function Blog({ data, location, pageContext }) {
           <div className="prev">
             <Link
               to={
-                pageContext.currentPage === 2 ? `/blog/` : `/blog/${pageContext.currentPage - 1}`
+                pageContext.currentPage === 2
+                  ? `/cat/${pageContext.catslug}/`
+                  : `/car/${pageContext.catslug}/${pageContext.currentPage - 1}`
               }
               rel="prev"
             >
@@ -49,7 +52,7 @@ export default function Blog({ data, location, pageContext }) {
         )}
         {!pageContext.isLast && (
           <div className="next">
-            <Link to={`/blog/${pageContext.currentPage + 1}/`} rel="next">
+            <Link to={`/cat/${pageContext.catslug}/${pageContext.currentPage + 1}/`} rel="next">
               <span>次のページ＞</span>
             </Link>
           </div>
@@ -61,10 +64,11 @@ export default function Blog({ data, location, pageContext }) {
 }
 
 export const query = graphql`
-  query($skip: Int!, $limit: Int!) {
+  query($catid: String!, $skip: Int!, $limit: Int!) {
     allContentfulArticles(sort: { order: DESC, fields: createdArticleDate }
       skip: $skip
       limit: $limit
+      filter: { category: { elemMatch: { id: { eq: $catid } } } }
     ) {
       edges {
         node {
