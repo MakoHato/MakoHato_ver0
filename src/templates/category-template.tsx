@@ -61,10 +61,11 @@ export default function Blog({ data, location, pageContext }) {
 }
 
 export const query = graphql`
-  query($skip: Int!, $limit: Int!) {
+  query($catid: String!, $skip: Int!, $limit: Int!) {
     allContentfulArticles(sort: { order: DESC, fields: createdArticleDate }
       skip: $skip
       limit: $limit
+      filter: { category: { elemMatch: { id: { eq: $catid } } } }
     ) {
       edges {
         node {
