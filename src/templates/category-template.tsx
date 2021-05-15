@@ -11,13 +11,14 @@ export default function Blog({ data, location, pageContext }) {
   return (
     <NanaLayout>
       <SEO
-        pagetitle="BLOG"
-        pagedesc="MakoのBLOGページです"
+        pagetitle={`CATEGORY: ${pageContext.catname}`}
+        pagedesc={`「${pageContext.catname}」の記事ページです。`}
         pagepath={location.pathname}
       />
       <div className="Blog-Page">
         <h2 className="txt-al-c pd-tb-50 fs-2r">BLOG</h2>
         <span className="bar-666-1"></span>
+        <h3>{pageContext.catname}</h3>
         <div>
           {data.allContentfulArticles.edges.map(({ node }) => (
             <article key={node.id}>
@@ -27,7 +28,7 @@ export default function Blog({ data, location, pageContext }) {
                   alt={node.eyecatch.description}
                   style={{ height:"100%" }}
                 />
-                <h3>{ node.title }</h3>
+                <h4>{ node.title }</h4>
               </Link>
             </article>
           ))}
