@@ -7,8 +7,8 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: `なないろWeek`,
-    description: `プログラム初心者Makoの一週間の記録。`,
+    title: `Makoと、はと。`,
+    description: `プログラム初心者Makoのことを紹介する個人サイトです。`,
     lang: `ja`,
     siteUrl: `https://nanairo-week.com`,
     locate: `ja_JP`,
@@ -19,13 +19,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `なないろWeek`,
-        short_name: `ななうぃーく`,
+        name: `Makoと、はと。`,
+        short_name: `まこはと`,
         start_url: "/",
         background_color: `#ffffff`,
         theme_color: `#ffffff`,
         display: `standalone`,
-        icon: `src/images/NanaIro-Week-icon.png`,
+        icon: `src/images/MakoHato-ICON.png`,
       },
     },
     {
