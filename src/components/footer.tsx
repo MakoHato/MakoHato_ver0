@@ -7,7 +7,7 @@ export default function NanaFooter() {
     <footer className="nana-footer">
       <div>
         <p className="copyright">
-          &copy; 2021 NanaIro-Week
+          &copy; 2021 MakoHato
         </p>
       </div>
     </footer>
