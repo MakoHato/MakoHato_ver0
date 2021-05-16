@@ -19,7 +19,13 @@
     ul {
       text-align: left;
       li {
+        display: inline-block;
+        margin: 0 0 10px 10px;
+        padding: 2px 3px;
+        font-size: 0.9rem;
+        border-radius: 10px;
         list-style: none;
+        border: solid 1px #666;
       }
     }
   }
