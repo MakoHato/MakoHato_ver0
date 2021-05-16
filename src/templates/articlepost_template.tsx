@@ -52,7 +52,7 @@ export default function BLOG_POST({ data, pageContext, location }) {
         <div className="category">
           <ul>
             {data.contentfulArticles.category.map(cat => (
-              <li className={cat.categorySlug}>
+              <li className={cat.categorySlug} key={cat.id}>
                 <Link to={`/cat/${cat.categorySlug}`}>{cat.category}</Link>
               </li>
             ))}
