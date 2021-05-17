@@ -1,11 +1,14 @@
 .Blog-Page {
   .Article-Area {
     article {
-      div {
-        display: flex;
-        h3 {
-          padding-left: 50px;
+      display: flex;
+      div.eyecatchArea {
+        .eyecatchImage {
+          width: 300px;
         }
+      }
+      h3 {
+        padding-left: 50px;
       }
       margin: 5% 10%;
       padding: 5%;
