@@ -22,14 +22,14 @@ export default function Blog({ data, location, pageContext }) {
           {data.allContentfulArticles.edges.map(({ node }) => (
             <Link to={`/blog/post/${node.slug}/`}>
               <article key={node.id}>
-                <div>
-                    <GatsbyImage
-                      image={node.eyecatch.gatsbyImageData}
-                      alt={node.eyecatch.description}
-                      style={{ height:"100%" }}
-                    />
-                    <h3>{ node.title }</h3>
+                <div className="eyecatchArea">
+                  <GatsbyImage
+                    className="eyecatchImage"
+                    image={node.eyecatch.gatsbyImageData}
+                    alt={node.eyecatch.description}
+                  />
                 </div>
+                <h3>{ node.title }</h3>
               </article>
             </Link>
           ))}
@@ -74,7 +74,7 @@ export const query = graphql`
           id
           slug
           eyecatch {
-            gatsbyImageData(width: 200, layout:CONSTRAINED)
+            gatsbyImageData(layout:FULL_WIDTH)
             description
           }
         }
