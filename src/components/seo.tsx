@@ -52,7 +52,7 @@ export default function Metadata(props){
       <meta property="og:image:alt" content="SNS用サイトイメージ画像" />
 
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@nanairo_week" />
+      <meta name="twitter:site" content="@Mako_Hato" />
       <meta name="twitter:creator" content="@Mak_o_" />
     </Helmet>
   )
