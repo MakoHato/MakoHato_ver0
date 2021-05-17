@@ -1,11 +1,11 @@
-.nana-header {
+.Mako-header {
   position: fixed;
   z-index: 999;
   width: 100%;
   height: 70px;
   box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.17);
   background-color: rgba(255,255,255, 1.0);
-  .nana-container {
+  .Mako-container {
     display: flex;
     align-items: center;
     height: 70px;
@@ -13,13 +13,13 @@
 }
 .Logo-Area{
   margin-left: 50px;
-  .nanairo-logo {
+  .MakoHato-logo {
     width: 300px;
     vertical-align: middle;
   }
 }
 
-.nana-nav1{
+.Mako-nav1{
   margin: 0 0 0 auto;
   ul {
     display: flex;
@@ -42,8 +42,8 @@
 
 
 @media only screen and (max-width: 755px) {
-  .nana-header {
-    .nana-container{
+  .Mako-header {
+    .Mako-container{
       justify-content: none;
       align-items: none;
     }
@@ -51,7 +51,7 @@
 
   .Logo-Area{
     margin-left: 20px;
-    .nanairo-logo {
+    .MakoHato-logo {
       width: 200px;
       vertical-align: middle;
     }
@@ -59,7 +59,7 @@
 }
 
 @media only screen and (max-width: 950px) {
-  .nana-nav1{
+  .Mako-nav1{
     display: none;
   }
 }

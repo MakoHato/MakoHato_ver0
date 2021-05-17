@@ -1,5 +1,5 @@
 import React from "react"
-import NanaLayout from "../components/layout"
+import MakoLayout from "../components/layout"
 
 import SEO from "../components/seo";
 
@@ -7,7 +7,7 @@ import "../styles/pages/photo.scss"
 
 export default function Photo({location}) {
   return (
-    <NanaLayout>
+    <MakoLayout>
       <SEO
         pagetitle="PHOTO"
         pagedesc="MakoのPHOTOページです"
@@ -23,6 +23,6 @@ export default function Photo({location}) {
           </p>
         </div>
       </div>
-    </NanaLayout>
+    </MakoLayout>
   )
 }

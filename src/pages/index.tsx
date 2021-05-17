@@ -6,8 +6,8 @@ import { TwitterTimelineEmbed } from "react-twitter-embed"
 import { useWindowDimensions } from "../Hooks/Window-Size"
 
 import HumburgerMenu from "../components/Humburger-Menu"
-import NanaHeader from "../components/header"
-import NanaFooter from "../components/footer"
+import MakoHeader from "../components/header"
+import MakoFooter from "../components/footer"
 
 import SEO from "../components/seo";
 
@@ -23,7 +23,7 @@ export default function Home({ data, location, pageContext }) {
         <HumburgerMenu />
       </div>
 
-      <NanaHeader />
+      <MakoHeader />
 
       <SEO />
 
@@ -55,17 +55,17 @@ export default function Home({ data, location, pageContext }) {
           <h2>Twitter</h2>
           <span className="bar-666-1"></span>
           <div className="Timeline-Area">
-            <div className="Nana-T">
-              <h3>NanaIroWeek's ACCOUNT</h3>
+            <div className="MakoHato-T">
+              <h3>MakoHato's ACCOUNT</h3>
               { width > 769
                 ?<TwitterTimelineEmbed
                   sourceType="profile"
-                  screenName="nanairo_week"
+                  screenName="Mako_Hato"
                   options={{ width: 400, height: 700}}
                 />
                 :<TwitterTimelineEmbed
                   sourceType="profile"
-                  screenName="nanairo_week"
+                  screenName="Mako_Hato"
                   options={{ width: 300, height: 400}}
                 />
               }
@@ -88,7 +88,7 @@ export default function Home({ data, location, pageContext }) {
           </div>
         </div>
       </div>
-      <NanaFooter />
+      <MakoFooter />
     </div>
   )
 }

@@ -1,5 +1,5 @@
 import React from "react"
-import NanaLayout from "../components/layout"
+import MakoLayout from "../components/layout"
 
 import SEO from "../components/seo";
 
@@ -7,7 +7,7 @@ import "../styles/pages/profile.scss"
 
 export default function Profile({location}) {
   return (
-    <NanaLayout>
+    <MakoLayout>
       <SEO
         pagetitle="PROFILE"
         pagedesc="Makoのことを紹介するページです。"
@@ -34,6 +34,6 @@ export default function Profile({location}) {
           </div>
         </div>
       </div>
-    </NanaLayout>
+    </MakoLayout>
   )
 }
