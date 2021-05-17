@@ -1,11 +1,11 @@
 import React from "react"
-import NanaLayout from "../components/layout"
+import MakoLayout from "../components/layout"
 
 import SEO from "../components/seo";
 
 export default function NotFound({location}) {
   return (
-    <NanaLayout>
+    <MakoLayout>
       <SEO pagetitle="ページが見つかりません" pagepath={location.pathname}/>
       <div className="404-Page h-100vh">
         <h2 className="txt-al-c pd-tb-50 fs-2r">404:NotFound</h2>
@@ -16,6 +16,6 @@ export default function NotFound({location}) {
           </p>
         </div>
       </div>
-    </NanaLayout>
+    </MakoLayout>
   )
 }

@@ -1,8 +1,8 @@
 import React from "react"
 
 import HumburgerMenu from "./Humburger-Menu"
-import NanaHeader from "./header"
-import NanaFooter from "./footer"
+import MakoHeader from "./header"
+import MakoFooter from "./footer"
 
 import "../styles/reset.scss"
 import "../styles/layout.scss"
@@ -15,7 +15,7 @@ export default function Layout({ children }) {
         <HumburgerMenu />
       </div>
 
-      <NanaHeader />
+      <MakoHeader />
 
       <div className="page">
 
@@ -23,7 +23,7 @@ export default function Layout({ children }) {
 
       </div>
 
-      <NanaFooter />
+      <MakoFooter />
 
     </div>
   )

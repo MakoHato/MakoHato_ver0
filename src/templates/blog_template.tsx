@@ -1,15 +1,15 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
-import NanaLayout from "../components/layout"
+import MakoLayout from "../components/layout"
 
 import SEO from "../components/seo";
 
-import "../styles/pages/blog.scss"
+import "../styles/templates/blog.scss"
 
 export default function Blog({ data, location, pageContext }) {
   return (
-    <NanaLayout>
+    <MakoLayout>
       <SEO
         pagetitle="BLOG"
         pagedesc="MakoのBLOGページです"
@@ -58,7 +58,7 @@ export default function Blog({ data, location, pageContext }) {
         )}
       </div>
 
-    </NanaLayout>
+    </MakoLayout>
   )
 }
 

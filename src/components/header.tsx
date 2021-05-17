@@ -4,21 +4,21 @@ import { StaticImage } from "gatsby-plugin-image"
 
 import "../styles/components/header.scss"
 
-export default function NanaHeader() {
+export default function MakoHeader() {
   return (
-    <header className="nana-header">
-      <div className="nana-container">
+    <header className="Mako-header">
+      <div className="Mako-container">
         <div className="Logo-Area">
           <Link to={`/`}>
             <StaticImage
-              className="nanairo-logo"
-              src="../images/MakoHato-Logo1.svg"
+              className="MakoHato-logo"
+              src="../images/MakoHato-LOGO.svg"
               alt="まこはとのロゴ"
             />
           </Link>
         </div>
 
-        <nav className="nana-nav1">
+        <nav className="Mako-nav1">
           <ul>
             <li>
               <Link to={`/`}>TOP</Link>

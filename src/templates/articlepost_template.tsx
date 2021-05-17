@@ -5,10 +5,10 @@ import { renderRichText } from "gatsby-source-contentful/rich-text"
 import { BLOCKS } from "@contentful/rich-text-types"
 import { documentToPlainTextString } from "@contentful/rich-text-plain-text-renderer"
 
-import NanaLayout from "../components/layout"
+import MakoLayout from "../components/layout"
 import SEO from "../components/seo"
 
-import "../styles/pages/articlepost.scss"
+import "../styles/templates/articlepost.scss"
 
 const options = {
   renderNode: {
@@ -30,7 +30,7 @@ const options = {
 
 export default function BLOG_POST({ data, pageContext, location }) {
   return (
-    <NanaLayout>
+    <MakoLayout>
       <SEO
         pagetitle={data.contentfulArticles.title}
         pagedesc={`${documentToPlainTextString(
@@ -83,7 +83,7 @@ export default function BLOG_POST({ data, pageContext, location }) {
           )}
       </div>
 
-    </NanaLayout>
+    </MakoLayout>
   )
 }
 
@@ -116,7 +116,7 @@ export const query:void = graphql`
           ... on ContentfulAsset {
             contentful_id
             __typename
-            gatsbyImageData(layout: CONSTRAINED width:400)
+            gatsbyImageData(layout: FULL_WIDTH)
             title
             description
           }

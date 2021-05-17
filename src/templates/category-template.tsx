@@ -1,24 +1,23 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
-import NanaLayout from "../components/layout"
+import MakoLayout from "../components/layout"
 
 import SEO from "../components/seo";
 
-import "../styles/pages/blog.scss"
+import "../styles/templates/category.scss"
 
 export default function Blog({ data, location, pageContext }) {
   return (
-    <NanaLayout>
+    <MakoLayout>
       <SEO
         pagetitle={`CATEGORY: ${pageContext.catname}`}
         pagedesc={`「${pageContext.catname}」の記事ページです。`}
         pagepath={location.pathname}
       />
       <div className="Blog-Page">
-        <h2 className="txt-al-c pd-tb-50 fs-2r">BLOG</h2>
+        <h2 className="txt-al-c pd-tb-50 fs-2r">{pageContext.catname}</h2>
         <span className="bar-666-1"></span>
-        <h3>{pageContext.catname}</h3>
         <div>
           {data.allContentfulArticles.edges.map(({ node }) => (
             <article key={node.id}>
@@ -59,7 +58,7 @@ export default function Blog({ data, location, pageContext }) {
         )}
       </div>
 
-    </NanaLayout>
+    </MakoLayout>
   )
 }
 

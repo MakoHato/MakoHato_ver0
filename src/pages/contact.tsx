@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from 'gatsby'
-import NanaLayout from "../components/layout"
+import MakoLayout from "../components/layout"
 
 import SEO from "../components/seo";
 
@@ -8,7 +8,7 @@ import "../styles/pages/contact.scss"
 
 export default function Contact({location}) {
   return (
-    <NanaLayout>
+    <MakoLayout>
       <SEO pagetitle="CONTACT" pagepath={location.pathname}/>
       <div className="Contact-Page h-100vh">
         <h2 className="contact-h2">CONTACT</h2>
@@ -54,6 +54,6 @@ export default function Contact({location}) {
           </div>
         </form>
       </div>
-    </NanaLayout>
+    </MakoLayout>
   )
 }
