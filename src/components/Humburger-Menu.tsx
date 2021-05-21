@@ -33,12 +33,13 @@ export default function HGmenu(props) {
             BLOG
           </Link>
         </div>
-
+{/*
         <div>
           <Link to="/photo/" className="menu-item" >
             PHOTO
           </Link>
         </div>
+*/}
 {/*
         <div>
           <Link to="/video/" className="menu-item" >
@@ -46,12 +47,15 @@ export default function HGmenu(props) {
           </Link>
         </div>
 */}
+{/*
         <div>
           <Link to="/profile/" className="menu-item" >
             PROFILE
           </Link>
         </div>
+*/}
         <div>
+
           <Link to="/contact/" className="menu-item" >
             CONTACT
           </Link>

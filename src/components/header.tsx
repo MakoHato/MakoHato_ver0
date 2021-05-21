@@ -26,12 +26,12 @@ export default function MakoHeader() {
             <li>
               <Link to={`/blog/`}>BLOG</Link>
             </li>
-            <li>
+            {/* <li>
               <Link to={`/photo/`}>PHOTO</Link>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <Link to={`/profile/`}>PROFILE</Link>
-            </li>
+            </li> */}
             {/* <li>
               <Link to={`/video/`}>VIDEO</Link>
             </li> */}

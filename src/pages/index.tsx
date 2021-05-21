@@ -41,7 +41,7 @@ export default function Home({ data, location, pageContext }) {
             ))}
           </div>
         </div>
-        <div className="Photo-Area">
+        {/* <div className="Photo-Area">
           <h2>Photo</h2>
           <span className="bar-666-1"></span>
           <div className="txt-al-c">
@@ -50,7 +50,7 @@ export default function Home({ data, location, pageContext }) {
               今後の更新をお待ちください。
             </p>
           </div>
-        </div>
+        </div> */}
         <div className="Twitter-Area">
           <h2>Twitter</h2>
           <span className="bar-666-1"></span>
