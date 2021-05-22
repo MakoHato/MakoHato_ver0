@@ -47,11 +47,15 @@
   .Blog-Page {
     .Article-Area {
       article {
-        div {
-          display: block;
-          h3 {
-            padding: 15px 0 0 0;
+        display: block !important;
+        div.eyecatchArea {
+          .eyecatchImage {
+            width: 100% !important;
           }
+        }
+        h3 {
+          padding-top: 20px;
+          padding-left: 0 !important;
         }
       }
     }
