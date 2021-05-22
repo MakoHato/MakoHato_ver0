@@ -77,3 +77,16 @@
     }
   }
 }
+
+
+@media only screen and (max-width: 950px) {
+  .page-tarasi-area {
+    padding-bottom: 70px;
+    .prev {
+      left: 20% !important;
+    }
+    .next {
+      right: 20% !important;
+    }
+  }
+}
