@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
 import { TwitterTimelineEmbed } from "react-twitter-embed"
 
 import { useWindowDimensions } from "../Hooks/Window-Size"
