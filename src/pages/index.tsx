@@ -33,10 +33,9 @@ export default function Home({ data, location, pageContext }) {
           <span className="bar-666-1"></span>
           <div className="article-area">
             {data.allContentfulArticles.edges.map(({ node }) => (
-              <Link to={`/blog/post/${node.slug}/`}>
-              <article key={node.id}>
+              <Link to={`/blog/post/${node.slug}/`} key={node.id}>
+              <article>
                   <h3>{node.title}</h3>
-
               </article>
               </Link>
             ))}

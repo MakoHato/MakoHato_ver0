@@ -33,9 +33,7 @@ export default function BLOG_POST({ data, pageContext, location }) {
     <MakoLayout>
       <SEO
         pagetitle={data.contentfulArticles.title}
-        pagedesc={`${documentToPlainTextString(
-          JSON.parse(data.contentfulArticles.article.raw)
-          ).slice(0, 70)}…`}
+        pagedesc={`${documentToPlainTextString(JSON.parse(data.contentfulArticles.article.raw)).slice(0, 70)}…`}
         pagepath={location.pathname}
         blogimg={`https:${data.contentfulArticles.eyecatch.file.url}`}
         pageimgw={data.contentfulArticles.eyecatch.file.details.image.width}
@@ -52,9 +50,11 @@ export default function BLOG_POST({ data, pageContext, location }) {
         <div className="category">
           <ul>
             {data.contentfulArticles.category.map(cat => (
-              <li className={cat.categorySlug} key={cat.id}>
-                <Link to={`/cat/${cat.categorySlug}`}>{cat.category}</Link>
-              </li>
+              <Link to={`/cat/${cat.categorySlug}`} key={cat.id}>
+                <li className={cat.categorySlug}>
+                  {cat.category}
+                </li>
+              </Link>
             ))}
           </ul>
         </div>
@@ -96,6 +96,7 @@ export const query:void = graphql`
       category {
         category
         categorySlug
+        id
       }
       eyecatch {
         gatsbyImageData(layout: FULL_WIDTH)
