@@ -3,10 +3,9 @@ import { Link } from "gatsby"
 import  { stack as Menu }  from "react-burger-menu"
 import { StaticImage } from "gatsby-plugin-image"
 
-
 import "../styles/components/Humburger-Menu.scss"
 
-export default function HGmenu(props) {
+const HGmenu: React.FC = ( props ) => {
   return (
     <Menu {...props}>
 
@@ -64,3 +63,5 @@ export default function HGmenu(props) {
     </Menu>
   );
 };
+
+export default HGmenu;
