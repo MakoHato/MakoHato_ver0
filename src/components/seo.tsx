@@ -3,13 +3,13 @@ import React from "react"
 import { Helmet } from "react-helmet"
 
 interface Props {
-  pagetitle: string,
-  pagedesc: string,
-  pagepath: string,
-  pageimg: string,
-  pageimgw: number,
-  pageimgh: number,
-  blogimg: string,
+  pagetitle?: string,
+  pagedesc?: string,
+  pagepath?: string,
+  pageimg?: string,
+  pageimgw?: number,
+  pageimgh?: number,
+  blogimg?: string,
 }
 
 const Metadata: React.FC<Props> = (props) => {
