@@ -10,7 +10,7 @@ module.exports = {
     title: `Makoと、はと。`,
     description: `プログラム初心者Makoのことを紹介する個人サイトです。`,
     lang: `ja`,
-    siteUrl: `https://nanairo-week.com`,
+    siteUrl: `https://makohato.com`,
     locate: `ja_JP`,
     fbappid: `280963450158852`,
   },
@@ -39,6 +39,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-typegen`,
     {
       resolve: `gatsby-source-contentful`,
       options: {
