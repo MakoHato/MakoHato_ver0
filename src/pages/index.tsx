@@ -13,7 +13,7 @@ import SEO from "../components/seo";
 import "../styles/Mako-Flame.scss"
 import "../styles/pages/index.scss"
 
-export default function Home({ data, location, pageContext }) {
+export default function Home({ data }) {
   const { width } = useWindowDimensions();
   return (
     <div>
