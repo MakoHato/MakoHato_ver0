@@ -2,7 +2,7 @@ import React from "react"
 
 import "../styles/components/footer.scss"
 
-export default function MakoFooter() {
+const MakoFooter: React.FC = () => {
   return (
     <footer className="Mako-footer">
       <div>
@@ -13,3 +13,5 @@ export default function MakoFooter() {
     </footer>
   )
 }
+
+export default MakoFooter;
