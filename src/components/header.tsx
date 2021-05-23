@@ -1,10 +1,10 @@
 import * as React from "react"
-import { graphql, Link } from "gatsby"
+import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 import "../styles/components/header.scss"
 
-export default function MakoHeader() {
+const MakoHeader: React.FC = () => {
   return (
     <header className="Mako-header">
       <div className="Mako-container">
@@ -62,3 +62,5 @@ export default function MakoHeader() {
     </header>
   )
 }
+
+export default MakoHeader;
