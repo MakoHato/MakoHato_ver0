@@ -7,7 +7,7 @@ import MakoFooter from "./footer"
 import "../styles/reset.scss"
 import "../styles/layout.scss"
 
-export default function Layout({ children }) {
+const Layout: React.FC = ({ children }) => {
   return(
     <div>
 
@@ -28,3 +28,5 @@ export default function Layout({ children }) {
     </div>
   )
 }
+
+export default Layout;
