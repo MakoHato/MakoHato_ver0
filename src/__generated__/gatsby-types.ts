@@ -4729,10 +4729,10 @@ type SitePluginSortInput = {
   readonly order: Maybe<ReadonlyArray<Maybe<SortOrderEnum>>>;
 };
 
-type cUsersMakoDesktopMakoHatosrccomponentsseoTsx517000578QueryVariables = Exact<{ [key: string]: never; }>;
+type SiteMetaDataQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type cUsersMakoDesktopMakoHatosrccomponentsseoTsx517000578Query = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title' | 'lang' | 'description' | 'siteUrl' | 'locate' | 'fbappid'>> }> };
+type SiteMetaDataQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title' | 'lang' | 'description' | 'siteUrl' | 'locate' | 'fbappid'>> }> };
 
 type cUsersMakoDesktopMakoHatosrctemplatesarticlepostTemplateTsx3709916888QueryVariables = Exact<{
   id: Scalars['String'];

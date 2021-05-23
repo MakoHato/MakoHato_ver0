@@ -2,9 +2,19 @@ import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
 import { Helmet } from "react-helmet"
 
-export default function Metadata(props){
-  const data = useStaticQuery(graphql`
-  query {
+interface Props {
+  pagetitle: string,
+  pagedesc: string,
+  pagepath: string,
+  pageimg: string,
+  pageimgw: number,
+  pageimgh: number,
+  blogimg: string,
+}
+
+const Metadata: React.FC<Props> = (props) => {
+  const data = useStaticQuery<GatsbyTypes.SiteMetaDataQuery>(graphql`
+  query SiteMetaData {
     site {
       siteMetadata {
         title
@@ -18,13 +28,14 @@ export default function Metadata(props){
   }
   `)
 
+
   const title:string = props.pagetitle ? `${props.pagetitle} | ${data.site.siteMetadata.title}` : data.site.siteMetadata.title
 
   const description:string = props.pagedesc || data.site.siteMetadata.description
 
-  const url = props.pagepath ? `${data.site.siteMetadata.siteUrl}${props.pagepath}` : data.site.siteMetadata.siteUrl
+  const url:string = props.pagepath ? `${data.site.siteMetadata.siteUrl}${props.pagepath}` : data.site.siteMetadata.siteUrl
 
-  const imgurl = props.pageimg ? `${data.site.siteMetadata.siteUrl}${props.pageimg}` : props.blogimg || `${data.site.siteMetadata.siteUrl}/sns-image.png`
+  const imgurl:string = props.pageimg ? `${data.site.siteMetadata.siteUrl}${props.pageimg}` : props.blogimg || `${data.site.siteMetadata.siteUrl}/sns-image.png`
 
   const imgw:number = props.pageimgw || 1920
 
@@ -57,3 +68,5 @@ export default function Metadata(props){
     </Helmet>
   )
 }
+
+export default Metadata;
