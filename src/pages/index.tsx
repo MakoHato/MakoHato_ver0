@@ -13,6 +13,23 @@ import SEO from "../components/seo";
 import "../styles/Mako-Flame.scss"
 import "../styles/pages/index.scss"
 
+export const query = graphql`
+  query {
+    allContentfulArticles(sort: { order: DESC, fields: createdArticleDate }
+      skip: 0
+      limit: 4
+    ) {
+      edges {
+        node {
+          title
+          id
+          slug
+        }
+      }
+    }
+  }
+`
+
 export default function Home({ data }) {
   const { width } = useWindowDimensions();
   return (
@@ -91,20 +108,3 @@ export default function Home({ data }) {
     </div>
   )
 }
-
-export const query = graphql`
-  query {
-    allContentfulArticles(sort: { order: DESC, fields: createdArticleDate }
-      skip: 0
-      limit: 4
-    ) {
-      edges {
-        node {
-          title
-          id
-          slug
-        }
-      }
-    }
-  }
-`
