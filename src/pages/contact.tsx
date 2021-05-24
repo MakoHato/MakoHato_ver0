@@ -1,12 +1,15 @@
 import React from "react"
-import { Link } from 'gatsby'
 import MakoLayout from "../components/layout"
 
 import SEO from "../components/seo";
 
 import "../styles/pages/contact.scss"
 
-export default function Contact({location}) {
+interface Props {
+  pathname?: string,
+}
+
+const Contact: React.FC<Props> = (location) => {
   return (
     <MakoLayout>
       <SEO pagetitle="CONTACT" pagepath={location.pathname}/>
@@ -57,3 +60,6 @@ export default function Contact({location}) {
     </MakoLayout>
   )
 }
+
+
+export default Contact;
