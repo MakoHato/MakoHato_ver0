@@ -7,38 +7,34 @@
   background-color: rgba(255,255,255, 1.0);
   .Mako-container {
     display: flex;
+    margin: 0 auto;
     align-items: center;
     height: 70px;
-  }
-}
-.Logo-Area{
-  margin-left: 50px;
-  .logo {
-    width: 275px;
-  }
-  .MakoHato-logo {
-    width: 300px;
-    vertical-align: middle;
-  }
-}
-
-.Mako-nav1{
-  margin: 0 0 0 auto;
-  ul {
-    display: flex;
-    list-style: none;
-  }
-  li {
-    margin: 0 25px;
-    line-height: 60px;
-    &.Mako {
-      width: 60px;
-      height: 60px;
-      border-radius: 30px;
-      border: solid 1px gray;
-      box-sizing: border-box;
-      margin: 0 20px;
-      text-align: center;
+    .Logo-Area{
+      margin-left: 50px;
+      .logo {
+        width: 275px;
+      }
+    }
+    .Mako-nav1{
+      margin: 0 0 0 auto;
+      ul {
+        display: flex;
+        list-style: none;
+        li {
+          margin: 0 25px;
+          line-height: 60px;
+          &.Mako {
+            width: 60px;
+            height: 60px;
+            border-radius: 30px;
+            border: solid 1px gray;
+            box-sizing: border-box;
+            margin: 0 20px;
+            text-align: center;
+          }
+        }
+      }
     }
   }
 }
@@ -49,17 +45,12 @@
     .Mako-container{
       justify-content: none;
       align-items: none;
-    }
-  }
-
-  .Logo-Area{
-    margin-left: 20px;
-    .logo {
-      width: 200px;
-    }
-    .MakoHato-logo {
-      width: 200px;
-      vertical-align: middle;
+      .Logo-Area{
+        margin-left: 20px;
+        .logo {
+          width: 200px;
+        }
+      }
     }
   }
 }
