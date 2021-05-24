@@ -5,7 +5,11 @@ import SEO from "../components/seo";
 
 import "../styles/pages/video.scss"
 
-export default function Video({location}) {
+interface Props {
+  pathname?: string,
+}
+
+const Video: React.FC<Props> = ( location ) => {
   return (
     <MakoLayout>
       <SEO
@@ -26,3 +30,6 @@ export default function Video({location}) {
     </MakoLayout>
   )
 }
+
+
+export default Video;

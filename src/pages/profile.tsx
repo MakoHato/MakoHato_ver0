@@ -5,7 +5,11 @@ import SEO from "../components/seo";
 
 import "../styles/pages/profile.scss"
 
-export default function Profile({location}) {
+interface Props {
+  pathname?: string,
+}
+
+const Profile: React.FC<Props> = ( location ) => {
   return (
     <MakoLayout>
       <SEO
@@ -37,3 +41,5 @@ export default function Profile({location}) {
     </MakoLayout>
   )
 }
+
+export default Profile;
