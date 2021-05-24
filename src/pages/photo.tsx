@@ -5,7 +5,11 @@ import SEO from "../components/seo";
 
 import "../styles/pages/photo.scss"
 
-export default function Photo({location}) {
+interface Props {
+  pathname?: string,
+}
+
+const Photo: React.FC<Props> = ( location ) => {
   return (
     <MakoLayout>
       <SEO
@@ -26,3 +30,5 @@ export default function Photo({location}) {
     </MakoLayout>
   )
 }
+
+export default Photo;
