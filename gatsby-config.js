@@ -40,6 +40,7 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-typegen`,
+    `gatsby-plugin-typescript`,
     {
       resolve: `gatsby-source-contentful`,
       options: {

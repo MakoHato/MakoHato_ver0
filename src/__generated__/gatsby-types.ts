@@ -954,6 +954,9 @@ type SitePluginPluginOptions = {
   readonly stripMetadata: Maybe<Scalars['Boolean']>;
   readonly defaultQuality: Maybe<Scalars['Int']>;
   readonly failOnError: Maybe<Scalars['Boolean']>;
+  readonly isTSX: Maybe<Scalars['Boolean']>;
+  readonly jsxPragma: Maybe<Scalars['String']>;
+  readonly allExtensions: Maybe<Scalars['Boolean']>;
   readonly spaceId: Maybe<Scalars['String']>;
   readonly accessToken: Maybe<Scalars['String']>;
   readonly host: Maybe<Scalars['String']>;
@@ -965,9 +968,6 @@ type SitePluginPluginOptions = {
   readonly useNameForId: Maybe<Scalars['Boolean']>;
   readonly path: Maybe<Scalars['String']>;
   readonly pathCheck: Maybe<Scalars['Boolean']>;
-  readonly allExtensions: Maybe<Scalars['Boolean']>;
-  readonly isTSX: Maybe<Scalars['Boolean']>;
-  readonly jsxPragma: Maybe<Scalars['String']>;
 };
 
 type SitePluginPackageJson = {
@@ -2508,6 +2508,9 @@ type SitePluginPluginOptionsFilterInput = {
   readonly stripMetadata: Maybe<BooleanQueryOperatorInput>;
   readonly defaultQuality: Maybe<IntQueryOperatorInput>;
   readonly failOnError: Maybe<BooleanQueryOperatorInput>;
+  readonly isTSX: Maybe<BooleanQueryOperatorInput>;
+  readonly jsxPragma: Maybe<StringQueryOperatorInput>;
+  readonly allExtensions: Maybe<BooleanQueryOperatorInput>;
   readonly spaceId: Maybe<StringQueryOperatorInput>;
   readonly accessToken: Maybe<StringQueryOperatorInput>;
   readonly host: Maybe<StringQueryOperatorInput>;
@@ -2519,9 +2522,6 @@ type SitePluginPluginOptionsFilterInput = {
   readonly useNameForId: Maybe<BooleanQueryOperatorInput>;
   readonly path: Maybe<StringQueryOperatorInput>;
   readonly pathCheck: Maybe<BooleanQueryOperatorInput>;
-  readonly allExtensions: Maybe<BooleanQueryOperatorInput>;
-  readonly isTSX: Maybe<BooleanQueryOperatorInput>;
-  readonly jsxPragma: Maybe<StringQueryOperatorInput>;
 };
 
 type SitePluginPackageJsonFilterInput = {
@@ -2770,6 +2770,9 @@ type SitePageFieldsEnum =
   | 'pluginCreator.pluginOptions.stripMetadata'
   | 'pluginCreator.pluginOptions.defaultQuality'
   | 'pluginCreator.pluginOptions.failOnError'
+  | 'pluginCreator.pluginOptions.isTSX'
+  | 'pluginCreator.pluginOptions.jsxPragma'
+  | 'pluginCreator.pluginOptions.allExtensions'
   | 'pluginCreator.pluginOptions.spaceId'
   | 'pluginCreator.pluginOptions.accessToken'
   | 'pluginCreator.pluginOptions.host'
@@ -2781,9 +2784,6 @@ type SitePageFieldsEnum =
   | 'pluginCreator.pluginOptions.useNameForId'
   | 'pluginCreator.pluginOptions.path'
   | 'pluginCreator.pluginOptions.pathCheck'
-  | 'pluginCreator.pluginOptions.allExtensions'
-  | 'pluginCreator.pluginOptions.isTSX'
-  | 'pluginCreator.pluginOptions.jsxPragma'
   | 'pluginCreator.nodeAPIs'
   | 'pluginCreator.browserAPIs'
   | 'pluginCreator.ssrAPIs'
@@ -4681,6 +4681,9 @@ type SitePluginFieldsEnum =
   | 'pluginOptions.stripMetadata'
   | 'pluginOptions.defaultQuality'
   | 'pluginOptions.failOnError'
+  | 'pluginOptions.isTSX'
+  | 'pluginOptions.jsxPragma'
+  | 'pluginOptions.allExtensions'
   | 'pluginOptions.spaceId'
   | 'pluginOptions.accessToken'
   | 'pluginOptions.host'
@@ -4692,9 +4695,6 @@ type SitePluginFieldsEnum =
   | 'pluginOptions.useNameForId'
   | 'pluginOptions.path'
   | 'pluginOptions.pathCheck'
-  | 'pluginOptions.allExtensions'
-  | 'pluginOptions.isTSX'
-  | 'pluginOptions.jsxPragma'
   | 'nodeAPIs'
   | 'browserAPIs'
   | 'ssrAPIs'
@@ -4729,10 +4729,10 @@ type SitePluginSortInput = {
   readonly order: Maybe<ReadonlyArray<Maybe<SortOrderEnum>>>;
 };
 
-type SiteMetaDataQueryVariables = Exact<{ [key: string]: never; }>;
+type cUsersMakoDesktopMakoHatosrcpagesindexTsx2146525424QueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type SiteMetaDataQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title' | 'lang' | 'description' | 'siteUrl' | 'locate' | 'fbappid'>> }> };
+type cUsersMakoDesktopMakoHatosrcpagesindexTsx2146525424Query = { readonly allContentfulArticles: { readonly edges: ReadonlyArray<{ readonly node: Pick<ContentfulArticles, 'title' | 'id' | 'slug'> }> } };
 
 type cUsersMakoDesktopMakoHatosrctemplatesarticlepostTemplateTsx3709916888QueryVariables = Exact<{
   id: Scalars['String'];
@@ -4757,10 +4757,17 @@ type cUsersMakoDesktopMakoHatosrctemplatesarticlepostTemplateTsx3709916888Query 
     )> }
   )> };
 
-type cUsersMakoDesktopMakoHatosrcpagesindexTsx2146525424QueryVariables = Exact<{ [key: string]: never; }>;
+type cUsersMakoDesktopMakoHatosrctemplatescategoryTemplateTsx2348830171QueryVariables = Exact<{
+  catid: Scalars['String'];
+  skip: Scalars['Int'];
+  limit: Scalars['Int'];
+}>;
 
 
-type cUsersMakoDesktopMakoHatosrcpagesindexTsx2146525424Query = { readonly allContentfulArticles: { readonly edges: ReadonlyArray<{ readonly node: Pick<ContentfulArticles, 'title' | 'id' | 'slug'> }> } };
+type cUsersMakoDesktopMakoHatosrctemplatescategoryTemplateTsx2348830171Query = { readonly allContentfulArticles: { readonly edges: ReadonlyArray<{ readonly node: (
+        Pick<ContentfulArticles, 'title' | 'id' | 'slug'>
+        & { readonly eyecatch: Maybe<Pick<ContentfulAsset, 'gatsbyImageData' | 'description'>> }
+      ) }> } };
 
 type cUsersMakoDesktopMakoHatosrctemplatesblogTemplateTsx1373623850QueryVariables = Exact<{
   skip: Scalars['Int'];
@@ -4773,17 +4780,25 @@ type cUsersMakoDesktopMakoHatosrctemplatesblogTemplateTsx1373623850Query = { rea
         & { readonly eyecatch: Maybe<Pick<ContentfulAsset, 'gatsbyImageData' | 'description'>> }
       ) }> } };
 
-type cUsersMakoDesktopMakoHatosrctemplatescategoryTemplateTsx2348830171QueryVariables = Exact<{
-  catid: Scalars['String'];
-  skip: Scalars['Int'];
-  limit: Scalars['Int'];
-}>;
+type GatsbyContentfulFixedFragment = Pick<ContentfulFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet'>;
 
+type GatsbyContentfulFixed_tracedSVGFragment = Pick<ContentfulFixed, 'tracedSVG' | 'width' | 'height' | 'src' | 'srcSet'>;
 
-type cUsersMakoDesktopMakoHatosrctemplatescategoryTemplateTsx2348830171Query = { readonly allContentfulArticles: { readonly edges: ReadonlyArray<{ readonly node: (
-        Pick<ContentfulArticles, 'title' | 'id' | 'slug'>
-        & { readonly eyecatch: Maybe<Pick<ContentfulAsset, 'gatsbyImageData' | 'description'>> }
-      ) }> } };
+type GatsbyContentfulFixed_noBase64Fragment = Pick<ContentfulFixed, 'width' | 'height' | 'src' | 'srcSet'>;
+
+type GatsbyContentfulFixed_withWebpFragment = Pick<ContentfulFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp'>;
+
+type GatsbyContentfulFixed_withWebp_noBase64Fragment = Pick<ContentfulFixed, 'width' | 'height' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp'>;
+
+type GatsbyContentfulFluidFragment = Pick<ContentfulFluid, 'base64' | 'aspectRatio' | 'src' | 'srcSet' | 'sizes'>;
+
+type GatsbyContentfulFluid_tracedSVGFragment = Pick<ContentfulFluid, 'tracedSVG' | 'aspectRatio' | 'src' | 'srcSet' | 'sizes'>;
+
+type GatsbyContentfulFluid_noBase64Fragment = Pick<ContentfulFluid, 'aspectRatio' | 'src' | 'srcSet' | 'sizes'>;
+
+type GatsbyContentfulFluid_withWebpFragment = Pick<ContentfulFluid, 'base64' | 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
+
+type GatsbyContentfulFluid_withWebp_noBase64Fragment = Pick<ContentfulFluid, 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
 
 type GatsbyImageSharpFixedFragment = Pick<ImageSharpFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet'>;
 
@@ -4811,25 +4826,10 @@ type GatsbyImageSharpFluid_noBase64Fragment = Pick<ImageSharpFluid, 'aspectRatio
 
 type GatsbyImageSharpFluid_withWebp_noBase64Fragment = Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
 
-type GatsbyContentfulFixedFragment = Pick<ContentfulFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet'>;
+type SiteMetaDataQueryVariables = Exact<{ [key: string]: never; }>;
 
-type GatsbyContentfulFixed_tracedSVGFragment = Pick<ContentfulFixed, 'tracedSVG' | 'width' | 'height' | 'src' | 'srcSet'>;
 
-type GatsbyContentfulFixed_noBase64Fragment = Pick<ContentfulFixed, 'width' | 'height' | 'src' | 'srcSet'>;
-
-type GatsbyContentfulFixed_withWebpFragment = Pick<ContentfulFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp'>;
-
-type GatsbyContentfulFixed_withWebp_noBase64Fragment = Pick<ContentfulFixed, 'width' | 'height' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp'>;
-
-type GatsbyContentfulFluidFragment = Pick<ContentfulFluid, 'base64' | 'aspectRatio' | 'src' | 'srcSet' | 'sizes'>;
-
-type GatsbyContentfulFluid_tracedSVGFragment = Pick<ContentfulFluid, 'tracedSVG' | 'aspectRatio' | 'src' | 'srcSet' | 'sizes'>;
-
-type GatsbyContentfulFluid_noBase64Fragment = Pick<ContentfulFluid, 'aspectRatio' | 'src' | 'srcSet' | 'sizes'>;
-
-type GatsbyContentfulFluid_withWebpFragment = Pick<ContentfulFluid, 'base64' | 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
-
-type GatsbyContentfulFluid_withWebp_noBase64Fragment = Pick<ContentfulFluid, 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
+type SiteMetaDataQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title' | 'lang' | 'description' | 'siteUrl' | 'locate' | 'fbappid'>> }> };
 
 type PagesQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
