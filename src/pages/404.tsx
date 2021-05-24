@@ -3,7 +3,11 @@ import MakoLayout from "../components/layout"
 
 import SEO from "../components/seo";
 
-export default function NotFound({location}) {
+interface Props {
+  pathname?: string,
+}
+
+const NotFound: React.FC<Props> = (location) => {
   return (
     <MakoLayout>
       <SEO pagetitle="ページが見つかりません" pagepath={location.pathname}/>
@@ -19,3 +23,5 @@ export default function NotFound({location}) {
     </MakoLayout>
   )
 }
+
+export default NotFound;
