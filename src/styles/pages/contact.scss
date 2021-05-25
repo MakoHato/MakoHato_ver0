@@ -3,7 +3,7 @@ input {
   border-radius: 10px;
   padding: 10px;
   border: none;
-  box-shadow: 0px 2px 5px 1px rgba(64, 60, 67, 0.16);
+  box-shadow: 0px 2px 5px 1px rgba(64, 60, 67, 0.35);
   &:focus {
     border: none;
     outline: none;
@@ -16,7 +16,7 @@ textarea {
   padding: 10px;
   border-radius: 10px;
   border: none;
-  box-shadow: 0px 2px 5px 1px rgba(64, 60, 67, 0.16);
+  box-shadow: 0px 2px 5px 1px rgba(64, 60, 67, 0.35);
   &:focus {
     border: none;
     outline: none;
@@ -30,8 +30,8 @@ textarea {
   padding: 10px 0;
   border: none;
   border-radius: 10px;
-  background-color: #00bfff;
-  box-shadow: 0px 2px 5px 1px rgba(64, 60, 67, 0.16);
+  background-color: #0077ff;
+  box-shadow: 0px 2px 5px 1px rgba(64, 60, 67, 0.35);
   color: white;
 }
 
@@ -49,6 +49,10 @@ textarea {
 @media only screen and (max-width: 755px) {
   input {
     width: 50%;
+    box-shadow: 0px 2px 5px 1px rgba(64, 60, 67, 0.35);
+  }
+  textarea {
+    box-shadow: 0px 2px 5px 1px rgba(64, 60, 67, 0.35);
   }
   .contact-bt {
     width: 50%;
