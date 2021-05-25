@@ -6,10 +6,10 @@ import SEO from "../components/seo";
 import "../styles/pages/profile.scss"
 
 interface Props {
-  pathname?: string,
+  location: Location;
 }
 
-const Profile: React.FC<Props> = ( location ) => {
+const Profile: React.FC<Props> = ({ location }) => {
   return (
     <MakoLayout>
       <SEO

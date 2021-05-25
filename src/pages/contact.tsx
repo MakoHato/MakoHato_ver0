@@ -6,10 +6,10 @@ import SEO from "../components/seo";
 import "../styles/pages/contact.scss"
 
 interface Props {
-  pathname?: string,
+  location: Location;
 }
 
-const Contact: React.FC<Props> = (location) => {
+const Contact: React.FC<Props> = ({ location }) => {
   return (
     <MakoLayout>
       <SEO pagetitle="CONTACT" pagepath={location.pathname}/>

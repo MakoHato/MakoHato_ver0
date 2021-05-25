@@ -6,10 +6,10 @@ import SEO from "../components/seo";
 import "../styles/pages/video.scss"
 
 interface Props {
-  pathname?: string,
+  location: Location;
 }
 
-const Video: React.FC<Props> = ( location ) => {
+const Video: React.FC<Props> = ({ location }) => {
   return (
     <MakoLayout>
       <SEO
