@@ -9,17 +9,6 @@ const HGmenu: React.FC = ( props ) => {
   return (
     <Menu {...props}>
 
-      <div className="Mako">
-        <a href="https://mobile.twitter.com/Mak_o_" target="_blank" rel="noopener noreferrer">
-          <StaticImage
-            src="../images/mako-icon.jpg"
-            alt="Makoのアイコン"
-          />
-        </a>
-        <p className="pd-t-10">
-          Mako
-        </p>
-      </div>
       <div className="Humberger-Nav">
         <div>
           <Link to="/" className="menu-item" >
