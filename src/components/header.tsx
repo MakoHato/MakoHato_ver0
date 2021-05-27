@@ -45,17 +45,6 @@ const MakoHeader: React.FC = () => {
             <li>
               <Link to={`/contact/`}>CONTACT</Link>
             </li>
-            <li className="Mako">
-              <a href="https://mobile.twitter.com/Mak_o_" target="_blank" rel="noopener noreferrer">
-                <StaticImage
-                  src="../images/mako-icon.jpg"
-                  alt="Makoのアイコン"
-                  style={{
-                    borderRadius: "30px"
-                  }}
-                />
-              </a>
-            </li>
           </ul>
         </nav>
       </div>
