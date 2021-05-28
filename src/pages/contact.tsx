@@ -13,7 +13,7 @@ const Contact: React.FC<Props> = ({ location }) => {
   return (
     <MakoLayout>
       <SEO pagetitle="CONTACT" pagepath={location.pathname}/>
-      <div className="Contact-Page h-100vh">
+      <div className="Contact-Page">
         <h2 className="contact-h2">CONTACT</h2>
         <span className="bar-666-1"></span>
         <form
