@@ -2,7 +2,7 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import { TwitterTimelineEmbed } from "react-twitter-embed"
 
-import { useWindowDimensions } from "../Hooks/Window-Size"
+// import { useWindowDimensions } from "../Hooks/Window-Size"
 
 import HumburgerMenu from "../components/Humburger-Menu"
 import MakoHeader from "../components/header"
@@ -31,7 +31,7 @@ export const query = graphql`
 `
 
 export default function Home({ data }) {
-  const { width } = useWindowDimensions();
+  // const { width } = useWindowDimensions();
   return (
     <div>
 
@@ -67,7 +67,7 @@ export default function Home({ data }) {
             </p>
           </div>
         </div> */}
-        <div className="Twitter-Area">
+        {/* <div className="Twitter-Area">
           <h2>Twitter</h2>
           <span className="bar-666-1"></span>
           <div className="Timeline-Area">
@@ -102,7 +102,7 @@ export default function Home({ data }) {
               }
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
       <MakoFooter />
     </div>

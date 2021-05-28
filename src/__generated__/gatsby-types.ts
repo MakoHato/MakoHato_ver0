@@ -314,8 +314,6 @@ type SitePage = Node & {
 
 type SitePageContext = {
   readonly id: Maybe<Scalars['String']>;
-  readonly next: Maybe<SitePageContextNext>;
-  readonly previous: Maybe<SitePageContextPrevious>;
   readonly skip: Maybe<Scalars['Int']>;
   readonly limit: Maybe<Scalars['Int']>;
   readonly currentPage: Maybe<Scalars['Int']>;
@@ -324,16 +322,6 @@ type SitePageContext = {
   readonly catid: Maybe<Scalars['String']>;
   readonly catname: Maybe<Scalars['String']>;
   readonly catslug: Maybe<Scalars['String']>;
-};
-
-type SitePageContextNext = {
-  readonly title: Maybe<Scalars['String']>;
-  readonly slug: Maybe<Scalars['String']>;
-};
-
-type SitePageContextPrevious = {
-  readonly title: Maybe<Scalars['String']>;
-  readonly slug: Maybe<Scalars['String']>;
 };
 
 type ImageFormat =
@@ -2474,8 +2462,6 @@ type SiteFunctionSortInput = {
 
 type SitePageContextFilterInput = {
   readonly id: Maybe<StringQueryOperatorInput>;
-  readonly next: Maybe<SitePageContextNextFilterInput>;
-  readonly previous: Maybe<SitePageContextPreviousFilterInput>;
   readonly skip: Maybe<IntQueryOperatorInput>;
   readonly limit: Maybe<IntQueryOperatorInput>;
   readonly currentPage: Maybe<IntQueryOperatorInput>;
@@ -2484,16 +2470,6 @@ type SitePageContextFilterInput = {
   readonly catid: Maybe<StringQueryOperatorInput>;
   readonly catname: Maybe<StringQueryOperatorInput>;
   readonly catslug: Maybe<StringQueryOperatorInput>;
-};
-
-type SitePageContextNextFilterInput = {
-  readonly title: Maybe<StringQueryOperatorInput>;
-  readonly slug: Maybe<StringQueryOperatorInput>;
-};
-
-type SitePageContextPreviousFilterInput = {
-  readonly title: Maybe<StringQueryOperatorInput>;
-  readonly slug: Maybe<StringQueryOperatorInput>;
 };
 
 type SitePluginFilterInput = {
@@ -2726,10 +2702,6 @@ type SitePageFieldsEnum =
   | 'internal.type'
   | 'isCreatedByStatefulCreatePages'
   | 'context.id'
-  | 'context.next.title'
-  | 'context.next.slug'
-  | 'context.previous.title'
-  | 'context.previous.slug'
   | 'context.skip'
   | 'context.limit'
   | 'context.currentPage'
@@ -4757,12 +4729,12 @@ type SitePluginSortInput = {
   readonly order: Maybe<ReadonlyArray<Maybe<SortOrderEnum>>>;
 };
 
-type cUsersMakoDesktopMakoHatosrctemplatesarticlepostTemplateTsx3709916888QueryVariables = Exact<{
+type cUsersnhs90215DesktopMakoHatosrctemplatesarticlepostTemplateTsx3709916888QueryVariables = Exact<{
   id: Scalars['String'];
 }>;
 
 
-type cUsersMakoDesktopMakoHatosrctemplatesarticlepostTemplateTsx3709916888Query = { readonly contentfulArticles: Maybe<(
+type cUsersnhs90215DesktopMakoHatosrctemplatesarticlepostTemplateTsx3709916888Query = { readonly contentfulArticles: Maybe<(
     Pick<ContentfulArticles, 'title' | 'createdArticleDate'>
     & { createdArticleDateJP: ContentfulArticles['createdArticleDate'] }
     & { readonly category: Maybe<ReadonlyArray<Maybe<Pick<ContentfulCategory, 'category' | 'categorySlug' | 'id'>>>>, readonly eyecatch: Maybe<(
@@ -4780,38 +4752,43 @@ type cUsersMakoDesktopMakoHatosrctemplatesarticlepostTemplateTsx3709916888Query 
     )> }
   )> };
 
-type SiteMetaDataQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type SiteMetaDataQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title' | 'lang' | 'description' | 'siteUrl' | 'locate' | 'fbappid'>> }> };
-
-type cUsersMakoDesktopMakoHatosrctemplatesblogTemplateTsx1373623850QueryVariables = Exact<{
+type cUsersnhs90215DesktopMakoHatosrctemplatesblogTemplateTsx1373623850QueryVariables = Exact<{
   skip: Scalars['Int'];
   limit: Scalars['Int'];
 }>;
 
 
-type cUsersMakoDesktopMakoHatosrctemplatesblogTemplateTsx1373623850Query = { readonly allContentfulArticles: { readonly edges: ReadonlyArray<{ readonly node: (
+type cUsersnhs90215DesktopMakoHatosrctemplatesblogTemplateTsx1373623850Query = { readonly allContentfulArticles: { readonly edges: ReadonlyArray<{ readonly node: (
         Pick<ContentfulArticles, 'title' | 'id' | 'slug'>
         & { readonly eyecatch: Maybe<Pick<ContentfulAsset, 'gatsbyImageData' | 'description'>> }
       ) }> } };
 
-type cUsersMakoDesktopMakoHatosrctemplatescategoryTemplateTsx2348830171QueryVariables = Exact<{
+type cUsersnhs90215DesktopMakoHatosrctemplatescategoryTemplateTsx2348830171QueryVariables = Exact<{
   catid: Scalars['String'];
   skip: Scalars['Int'];
   limit: Scalars['Int'];
 }>;
 
 
-type cUsersMakoDesktopMakoHatosrctemplatescategoryTemplateTsx2348830171Query = { readonly allContentfulArticles: { readonly edges: ReadonlyArray<{ readonly node: (
+type cUsersnhs90215DesktopMakoHatosrctemplatescategoryTemplateTsx2348830171Query = { readonly allContentfulArticles: { readonly edges: ReadonlyArray<{ readonly node: (
         Pick<ContentfulArticles, 'title' | 'id' | 'slug'>
         & { readonly eyecatch: Maybe<Pick<ContentfulAsset, 'gatsbyImageData' | 'description'>> }
       ) }> } };
 
-type cUsersMakoDesktopMakoHatosrcpagesindexTsx2146525424QueryVariables = Exact<{ [key: string]: never; }>;
+type PagesQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type cUsersMakoDesktopMakoHatosrcpagesindexTsx2146525424Query = { readonly allContentfulArticles: { readonly edges: ReadonlyArray<{ readonly node: Pick<ContentfulArticles, 'title' | 'id' | 'slug'> }> } };
+type PagesQueryQuery = { readonly allSiteFunction: { readonly nodes: ReadonlyArray<Pick<SiteFunction, 'apiRoute'>> }, readonly allSitePage: { readonly nodes: ReadonlyArray<Pick<SitePage, 'path'>> } };
+
+type cUsersnhs90215DesktopMakoHatosrcpagesindexTsx2146525424QueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type cUsersnhs90215DesktopMakoHatosrcpagesindexTsx2146525424Query = { readonly allContentfulArticles: { readonly edges: ReadonlyArray<{ readonly node: Pick<ContentfulArticles, 'title' | 'id' | 'slug'> }> } };
+
+type SiteMetaDataQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type SiteMetaDataQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title' | 'lang' | 'description' | 'siteUrl' | 'locate' | 'fbappid'>> }> };
 
 type GatsbyImageSharpFixedFragment = Pick<ImageSharpFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet'>;
 
@@ -4858,10 +4835,5 @@ type GatsbyContentfulFluid_noBase64Fragment = Pick<ContentfulFluid, 'aspectRatio
 type GatsbyContentfulFluid_withWebpFragment = Pick<ContentfulFluid, 'base64' | 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
 
 type GatsbyContentfulFluid_withWebp_noBase64Fragment = Pick<ContentfulFluid, 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
-
-type PagesQueryQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type PagesQueryQuery = { readonly allSiteFunction: { readonly nodes: ReadonlyArray<Pick<SiteFunction, 'apiRoute'>> }, readonly allSitePage: { readonly nodes: ReadonlyArray<Pick<SitePage, 'path'>> } };
 
 }
