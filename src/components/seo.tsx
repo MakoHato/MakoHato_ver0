@@ -2,7 +2,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
 import { Helmet } from "react-helmet"
 
-interface Props {
+type Props = {
   pagetitle?: string,
   pagedesc?: string,
   pagepath?: string,
@@ -29,17 +29,17 @@ const Metadata: React.FC<Props> = (props) => {
   `)
 
 
-  const title:string = props.pagetitle ? `${props.pagetitle} | ${data.site.siteMetadata.title}` : data.site.siteMetadata.title
+  const title = props.pagetitle ? `${props.pagetitle} | ${data.site.siteMetadata.title}` : data.site.siteMetadata.title
 
-  const description:string = props.pagedesc || data.site.siteMetadata.description
+  const description = props.pagedesc || data.site.siteMetadata.description
 
-  const url:string = props.pagepath ? `${data.site.siteMetadata.siteUrl}${props.pagepath}` : data.site.siteMetadata.siteUrl
+  const url = props.pagepath ? `${data.site.siteMetadata.siteUrl}${props.pagepath}` : data.site.siteMetadata.siteUrl
 
-  const imgurl:string = props.pageimg ? `${data.site.siteMetadata.siteUrl}${props.pageimg}` : props.blogimg || `${data.site.siteMetadata.siteUrl}/sns-image.png`
+  const imgurl = props.pageimg ? `${data.site.siteMetadata.siteUrl}${props.pageimg}` : props.blogimg || `${data.site.siteMetadata.siteUrl}/sns-image.png`
 
-  const imgw:number = props.pageimgw || 1920
+  const imgw = props.pageimgw || 1920
 
-  const imgh:number = props.pageimgh || 1080
+  const imgh = props.pageimgh || 1080
 
   return (
     <Helmet>

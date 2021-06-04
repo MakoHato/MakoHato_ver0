@@ -5,9 +5,9 @@ import { StaticImage } from "gatsby-plugin-image"
 
 import "../styles/components/Humburger-Menu.scss"
 
-const HGmenu: React.FC = ( props ) => {
+const HGmenu: React.FC = () => {
   return (
-    <Menu {...props}>
+    <Menu>
 
       <div className="Humberger-Nav">
         <div>
