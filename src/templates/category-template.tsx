@@ -43,7 +43,7 @@ export default function Blog({ data, location, pageContext }) {
               to={
                 pageContext.currentPage === 2
                   ? `/cat/${pageContext.catslug}/`
-                  : `/car/${pageContext.catslug}/${pageContext.currentPage - 1}`
+                  : `/cat/${pageContext.catslug}/${pageContext.currentPage - 1}`
               }
               rel="prev"
             >
